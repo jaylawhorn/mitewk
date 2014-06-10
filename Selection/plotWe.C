@@ -20,17 +20,10 @@
 #include "Math/LorentzVector.h"           // 4-vector class
 
 #include "ConfParse.hh"                   // input conf file parser
-<<<<<<< HEAD
 #include "EWKAna/Utils/CSample.hh"        // helper class to handle samples
 #include "EWKAna/Utils/MyTools.hh"        // various helper functions
 #include "EWKAna/Utils/CPlot.hh"	  // helper class for plots
 #include "EWKAna/Utils/MitStyleRemix.hh"  // style settings for drawing
-=======
-#include "../Utils/CSample.hh"            // helper class to handle samples
-#include "../Utils/MyTools.hh"            // various helper functions
-#include "../Utils/CPlot.hh"	          // helper class for plots
-#include "../Utils/MitStyleRemix.hh"      // style settings for drawing
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #endif
 
 typedef ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<double> > LorentzVector;

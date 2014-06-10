@@ -4,13 +4,8 @@
 #include "MitAna/DataUtil/interface/Debug.h"
 #include "MitAna/Catalog/interface/Catalog.h"
 #include "MitAna/TreeMod/interface/Analysis.h"
-<<<<<<< HEAD
 #include "EWKAna/Ntupler/interface/SCNtuplerMod.hh"
 #include "EWKAna/Ntupler/interface/EWKAnaDefs.hh"
-=======
-#include "MitEwk/Ntupler/interface/SCNtuplerMod.hh"
-#include "MitEwk/Ntupler/interface/EWKAnaDefs.hh"
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #endif
 
 using namespace mithep;
@@ -32,55 +27,32 @@ using namespace mithep;
  * Run on a BAMBU fileset
  *
  * Example usage:
-<<<<<<< HEAD
  *   root -l -q -b runSCNtupler.C+\(\"0000\",\"f11-h250zz2l-gf-v14b-pu\",\"t2mit/filefi/029\",\"/home/cmsprod/catalog\",0,0,0,-1,0\)
-=======
- *   root -l -q -b runSCNtupler.C+\(\"0000\",\"noskim\",\"r12a-sel-v1\",\"t2mit/filefi/029\",\"/home/cmsprod/catalog/\",\"/scratch/klawhorn/EWKAna/bacon/\"\)
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
  *
  * Output file name has standard format: <dataset>_<fileset>_ntuple.root
  *
  */
 
-<<<<<<< HEAD
 //int decodeEnv(Bool_t* isData, Int_t* useGen, Int_t* fsrmode, Bool_t* skipHLTFail);
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 void runSCNtupler(const char *fileset,
 		  const char *skim,
 		  const char *dataset,
 		  const char *book,
 		  const char *catalogDir,
 		  const char *outputName,
-<<<<<<< HEAD
 		  const Int_t nevents,
 		  const Bool_t isData,
 		  const Int_t useGen,
 		  const Int_t fsrmode,
 		  const Int_t skipHLTFail)
-=======
-		  int nevents)
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 {
   gDebugMask  = Debug::kAnalysis;  // debug message category
   gDebugLevel = 1;                 // higher level allows more messages to print
 
-<<<<<<< HEAD
   //if (decodeEnv(isData, useGen, fsrmode, skipHLTFail) !=0)
   //return;
-=======
-  // Set some useful flags
-
-  Bool_t isData = kTRUE; // is Data? kTRUE or kFALSE
-
-  Bool_t skipHLTFail = 1; // skip events that fail the HLT? 0 or 1 (generally 1 for data, 0 for MC)
-
-  Int_t useGen = 0; // use generator info? (see above)
-
-  Int_t fsrmode = 0; // fsr mode? related to what generator was used for MC (generally 0)
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   cout << "isData: " << isData << " useGen: " << useGen << " fsrmode: " << fsrmode << " skipHLTFail: " << skipHLTFail << endl;
 
@@ -111,11 +83,7 @@ void runSCNtupler(const char *fileset,
   //
   // setup analysis object
   //
-<<<<<<< HEAD
   Bool_t caching = kFALSE;
-=======
-  Bool_t caching = kFALSE; // set this to true if you want to use file caching on t3
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   Analysis *ana = new Analysis;
   ana->SetUseHLT(kTRUE);
   if(nevents>0) 
@@ -136,11 +104,7 @@ void runSCNtupler(const char *fileset,
   // setup ntupler module
   //
   SCNtuplerMod *mymod = new SCNtuplerMod;
-<<<<<<< HEAD
   mymod->SetOutputName(TString(outputName)+TString("_")+TString(fileset)+TString(".root"));          // output ntuple file name
-=======
-  mymod->SetOutputName(outputName);          // output ntuple file name
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   mymod->SetIsData(isData);              // toggle data specific or MC specific procedures
   mymod->SetUseGen(useGen);              // use generator info
   mymod->SetSkipIfHLTFail(skipHLTFail);  // skip to next event if no HLT accept
@@ -175,11 +139,7 @@ void runSCNtupler(const char *fileset,
   }
   //
   // SingleMu
-<<<<<<< HEAD
   //
-=======
-  // these are examples of triggers with trigger objects
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   mymod->AddTrigger("HLT_IsoMu24_eta2p1_v11", kHLT_IsoMu24_eta2p1, "hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoFiltered10", kHLT_IsoMu24_eta2p1Obj);
   mymod->AddTrigger("HLT_IsoMu24_eta2p1_v12", kHLT_IsoMu24_eta2p1, "hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoFiltered10", kHLT_IsoMu24_eta2p1Obj);
@@ -189,11 +149,7 @@ void runSCNtupler(const char *fileset,
 
   //
   // SingleElectron
-<<<<<<< HEAD
   // 
-=======
-  // these are examples of triggers with trigger objects
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   mymod->AddTrigger("HLT_Ele27_WP80_v8", kHLT_Ele27_WP80, "hltEle27WP80TrackIsoFilter", kHLT_Ele27_WP80Obj);
   mymod->AddTrigger("HLT_Ele27_WP80_v9", kHLT_Ele27_WP80, "hltEle27WP80TrackIsoFilter", kHLT_Ele27_WP80Obj);
@@ -202,11 +158,7 @@ void runSCNtupler(const char *fileset,
 
   //
   // DoubleMu
-<<<<<<< HEAD
   //
-=======
-  // and these are just triggers -- no object matching
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   mymod->AddTrigger("HLT_Mu17_TkMu8_v9", kHLT_Mu17_TkMu8);
   mymod->AddTrigger("HLT_Mu17_TkMu8_v10", kHLT_Mu17_TkMu8);
@@ -217,11 +169,7 @@ void runSCNtupler(const char *fileset,
 
   //
   // DoubleEle
-<<<<<<< HEAD
   //
-=======
-  // and these are just triggers -- no object matching
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   mymod->AddTrigger("HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v15", kHLT_Ele17_CaloIdL_CaloIsoVL);
   mymod->AddTrigger("HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v16", kHLT_Ele17_CaloIdL_CaloIsoVL);
@@ -229,22 +177,15 @@ void runSCNtupler(const char *fileset,
   mymod->AddTrigger("HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v18", kHLT_Ele17_CaloIdL_CaloIsoVL);
   mymod->AddTrigger("HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v19", kHLT_Ele17_CaloIdL_CaloIsoVL);
 
-<<<<<<< HEAD
   mymod->SetPrintHLT(kFALSE); // print HLT table at start of analysis?
-=======
-  mymod->SetPrintHLT(kFALSE); // print HLT table at start of analysis? good for debugging.. also lots of spam
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   ana->AddSuperModule(mymod); 
     
   //
   // run analysis after successful initialisation
   //
-<<<<<<< HEAD
 
   cout << "hi!" << endl;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   ana->Run(!gROOT->IsBatch());
 }
 
@@ -253,66 +194,38 @@ void runSCNtupler(const char *fileset,
  * Run on a single BAMBU file (mainly for testing purposes)
  *
  */
-<<<<<<< HEAD
 void runSCNtupler(
 		  const char *file   = "root://xrootd.cmsaf.mit.edu//store/user/paus/filefi/031/s12-wmm-v7a/003CD7E4-EADE-E111-A55C-00215E20426E.root",
-=======
-//==================================================================================================
-void runSCNtupler(
-		  const char *file   = "root://xrootd.cmsaf.mit.edu//store/user/paus/filefi/029/r12a-sel-j22-v1/00176847-0073-E211-9FFE-0030487DE7C5.root",
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 		  const char *output = "/scratch/klawhorn/test_scntuple.root",
 		  Bool_t isData      = kTRUE,
 		  Int_t  useGen      = 0,
 		  Int_t  fsrmode     = 0,
-<<<<<<< HEAD
 		  Int_t  nevents     = 10,
-=======
-		  Int_t  nevents     = -1,
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 		  Bool_t skipHLTFail = kFALSE
 		  )
 {
   gDebugMask  = Debug::kAnalysis;  // debug message category
-<<<<<<< HEAD
   gDebugLevel = 1;                 // higher level allows more messages to print
 
   cout << "." << endl;
 
   // muon kinematics
   const Double_t muPtMin  = 20;
-=======
-  gDebugLevel = 0xFFFFFFFF;                 // higher level allows more messages to print
-
-  // muon kinematics
-  const Double_t muPtMin  = 0;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t muPtMax  = 7000;
   const Double_t muEtaMin = -3;
   const Double_t muEtaMax =  3;
 
   // electron kinematics
-<<<<<<< HEAD
   const Double_t eleEtMin  = 20;
-=======
-  const Double_t eleEtMin  = 9;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t eleEtMax  = 7000;
   const Double_t eleEtaMin = -3;
   const Double_t eleEtaMax =  3;
   
   // jet requirements
-<<<<<<< HEAD
   const Double_t jetPtMin = 20;
 
   // SC requirements
   const Double_t scEtMin = 20;
-=======
-  const Double_t jetPtMin = 10;
-
-  // SC requirements
-  const Double_t scEtMin = 9;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       
   // good PV requirements
   const UInt_t   minNTracksFit = 0;
@@ -357,10 +270,7 @@ void runSCNtupler(
   char* PATH = getenv("CMSSW_BASE"); assert(PATH);
   TString path(TString::Format("%s/src/MitPhysics/data/", PATH));
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   mymod->AddJetCorr(path+"Summer13_V1_MC_L1FastJet_AK5PF.txt");
   mymod->AddJetCorr(path+"Summer13_V1_MC_L2Relative_AK5PF.txt");
   mymod->AddJetCorr(path+"Summer13_V1_MC_L3Absolute_AK5PF.txt");
@@ -411,11 +321,7 @@ void runSCNtupler(
   mymod->AddTrigger("HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v18", kHLT_Ele17_CaloIdL_CaloIsoVL);
   mymod->AddTrigger("HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v19", kHLT_Ele17_CaloIdL_CaloIsoVL);
   
-<<<<<<< HEAD
   mymod->SetPrintHLT(kTRUE); // print HLT table at start of analysis?
-=======
-  mymod->SetPrintHLT(kFALSE); // print HLT table at start of analysis?
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   ana->AddSuperModule(mymod); 
   
@@ -425,7 +331,6 @@ void runSCNtupler(
   ana->Run(!gROOT->IsBatch());
 
 }
-<<<<<<< HEAD
 /*
 int decodeEnv(Bool_t* isData, Int_t* useGen, Int_t* fsrmode, Bool_t* skipHLTFail)
 {
@@ -464,6 +369,3 @@ int decodeEnv(Bool_t* isData, Int_t* useGen, Int_t* fsrmode, Bool_t* skipHLTFail
   return 0;
 }
 */
-=======
-
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f

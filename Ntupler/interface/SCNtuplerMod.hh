@@ -12,11 +12,7 @@
 #include "MitAna/DataCont/interface/RunLumiSet.h"
 #include "CondFormats/JetMETObjects/interface/FactorizedJetCorrector.h"
 #include "MitPhysics/Utils/interface/ElectronIDMVA.h"
-<<<<<<< HEAD
 #include "MitPhysics/Utils/interface/MVAMet.h"
-=======
-#include "MitPhysics/Utils/interface/MVAMet.h" // added for mvaMET
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 #include "EWKAnaDefs.hh"
 #include "TEventInfo.hh"
@@ -27,10 +23,7 @@
 #include "TJet.hh"
 #include "TPhoton.hh"
 #include "TVertex.hh"
-<<<<<<< HEAD
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include <vector>
 
 class TTree;
@@ -59,11 +52,8 @@ namespace mithep
       void SetEleEtMax(const Double_t pt)       { fEleEtMax = pt; }
       void SetEleEtaMin(const Double_t eta)     { fEleEtaMin = eta; }
       void SetEleEtaMax(const Double_t eta)     { fEleEtaMax = eta; }
-<<<<<<< HEAD
       void SetTauEtMin(const Double_t pt)       { fPFTauEtMin = pt; }
       void SetTauEtaMax(const Double_t eta)     { fPFTauEtaMax = eta; }
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       void SetJetPtMin(const Double_t et)       { fJetPtMin = et; }
       void SetSCEtMin(const Double_t et)        { fSCEtMin = et; }
       void SetMinNTracksFit(const UInt_t ntrks) { fMinNTracksFit = ntrks; }
@@ -165,20 +155,13 @@ namespace mithep
       TString                       fPUEnergyDensityName;  // Fastjet correction info name
       TString                       fPFCandidateName;      // particle flow candidates collection name
       TString                       fTracksName;           // track collection name           
-<<<<<<< HEAD
-=======
-      // added for mvaMET
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       TString                       fHPSTauName;           // tau collection name
       
       const MCParticleCol          *fParticles;       // MC particle collection handle
       const MCEventInfo            *fMCEvtInfo;       // MC event info handle
       const MuonCol                *fMuons;           // muon collection handle
       const ElectronCol            *fElectrons;       // electron collection handle
-<<<<<<< HEAD
       const PFTauCol               *fPFTaus;          // tau collection handle
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       const VertexCol              *fPrimVerts;       // primary vertex collection handle
       const BeamSpotCol            *fBeamSpot;        // pointer to beam spot branch
       const PFJetCol               *fPFJets;          // particle flow jet collection handle
@@ -191,11 +174,6 @@ namespace mithep
       const PileupInfoCol          *fPileup;          // pile-up info handle
       const PileupEnergyDensityCol *fPUEnergyDensity; // Fastjet correction info handle
       const PFCandidateCol         *fPFCandidates;    // particle flow candidates collection handle
-<<<<<<< HEAD
-=======
-      // added for mvaMET
-      const PFTauCol               *fPFTaus;          // tau collection handle
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       PFCandidateOArr              *fPFPileUp;
       PFCandidateOArr              *fPFNoPileUp;
       const TrackCol               *fTracks;          // tracks collection handle
@@ -213,23 +191,14 @@ namespace mithep
       Double_t                fEleEtMax;        // maximum electron supercluster ET
       Double_t                fEleEtaMin;       // minimum electron supercluster eta
       Double_t                fEleEtaMax;       // maximum electron supercluster eta
-<<<<<<< HEAD
       Double_t                fPFTauEtMin;      // minimum tau ET
       Double_t                fPFTauEtaMax;     // maxium tau eta
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       Double_t                fJetPtMin;        // minimum jet ET
       Double_t                fSCEtMin;         // minimum supercluster ET
       UInt_t                  fMinNTracksFit;   // minimum number of tracks used for a good primary vertex
       Double_t                fMinNdof;         // minimum degrees of freedom for a good primary vertex
       Double_t                fMaxAbsZ;         // maximum z displacement for a good primary vertex
       Double_t                fMaxRho;          // maximum transverse displacement for a good primary vertex 
-<<<<<<< HEAD
-=======
-      // added for mvaMET
-      Double_t                fPFTauEtMin;      // minimum tau ET
-      Double_t                fPFTauEtaMax;     // maximum tau eta
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       
       TTree*                  fEventTree;       // event tree
 
@@ -263,11 +232,6 @@ namespace mithep
       FactorizedJetCorrector *fJetCorrector;    // CMSSW class to handle jet corrections
       
       ElectronIDMVA          *fEleMVA;      
-<<<<<<< HEAD
-=======
-
-      // added for mvaMET
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       MVAMet                 *fMVAMet;
       
       RunLumiSet                       fRunLumiSet;

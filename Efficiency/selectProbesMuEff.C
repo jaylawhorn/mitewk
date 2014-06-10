@@ -11,19 +11,13 @@
 #include <TSystem.h>                      // interface to OS
 #include <TFile.h>                        // file handle class
 #include <TTree.h>                        // class to access ntuples
-<<<<<<< HEAD
 #include <TH1.h>
 #include <TCanvas.h>
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include <TBenchmark.h>                   // class to track macro running statistics
 #include <vector>                         // STL vector class
 #include <iostream>                       // standard I/O
 #include <iomanip>                        // functions to format standard I/O
-<<<<<<< HEAD
 #include <ostream>
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include "Math/LorentzVector.h"           // 4-vector class
 
 // structure for output ntuple
@@ -47,11 +41,7 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   // Settings 
   //==============================================================================================================   
  
-<<<<<<< HEAD
   const Double_t TAG_PT_CUT = 30;
-=======
-  const Double_t TAG_PT_CUT = 25;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
 
   //--------------------------------------------------------------------------------------------------------------
@@ -67,11 +57,8 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   enum { eMuMu2HLT=1, eMuMu1HLT, eMuMuNoSel, eMuSta, eMuTrk };  // event category enum
   
   Double_t nProbes = 0;
-<<<<<<< HEAD
 
   Double_t nBroken = 0;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   //
   // Set up output ntuple
@@ -82,15 +69,12 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   EffData data;
   outTree->Branch("Events",&data.mass,"mass/F:pt:eta:phi:weight:q/I:npv/i:npu:pass:runNum:lumiSec:evtNum");
 
-<<<<<<< HEAD
   TCanvas *c1 = new TCanvas("c1", "", 800, 600);
 
   TH1F *hCH = new TH1F("hCH", "", 50, -10, 40);
   TH1F *hGAM = new TH1F("hGAM", "", 50, -10, 40);
   TH1F *hNEU = new TH1F("hNEU", "", 50, -10, 40);
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //
   // Declare output ntuple variables
   //
@@ -104,11 +88,8 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   LorentzVector *dilep=0, *lep1=0, *lep2=0;
   LorentzVector *sta1=0, *sta2=0;
   Float_t pfCombIso1, pfCombIso2;
-<<<<<<< HEAD
   Float_t pfChIso1, pfGamIso1, pfNeuIso1;
   Float_t pfChIso2, pfGamIso2, pfNeuIso2;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   Float_t d01, dz1, d02, dz2;
   Float_t muNchi21,  muNchi22;
   UInt_t nPixHits1, nTkLayers1, nPixHits2, nTkLayers2;
@@ -142,15 +123,12 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   intree->SetBranchAddress("sta2",       &sta2);        // probe STA muon 4-vector 
   intree->SetBranchAddress("pfCombIso1", &pfCombIso1);  // PF combined isolation of tag lepton
   intree->SetBranchAddress("pfCombIso2", &pfCombIso2);  // PF combined isolation of probe lepton    
-<<<<<<< HEAD
   intree->SetBranchAddress("pfChIso1",   &pfChIso1);    // PF combined isolation of tag lepton
   intree->SetBranchAddress("pfChIso2",   &pfChIso2);    // PF combined isolation of probe lepton    
   intree->SetBranchAddress("pfGamIso1",  &pfGamIso1);   // PF combined isolation of tag lepton
   intree->SetBranchAddress("pfGamIso2",  &pfGamIso2);   // PF combined isolation of probe lepton    
   intree->SetBranchAddress("pfNeuIso1",  &pfNeuIso1);   // PF combined isolation of tag lepton
   intree->SetBranchAddress("pfNeuIso2",  &pfNeuIso2);   // PF combined isolation of probe lepton    
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   intree->SetBranchAddress("d01",        &d01); 	// transverse impact parameter of tag lepton
   intree->SetBranchAddress("d02",	 &d02); 	// transverse impact parameter of probe lepton      
   intree->SetBranchAddress("dz1",	 &dz1); 	// longitudinal impact parameter of tag lepton
@@ -253,7 +231,6 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
       //    
       if     (category==eMuMu2HLT)  { pass=kTRUE; }
       else if(category==eMuMu1HLT)  { pass=kTRUE; }
-<<<<<<< HEAD
       else if(category==eMuMuNoSel) { 
 	if(pfCombIso2>0.12*(lep2->Pt())) continue; 
 	else { 
@@ -267,9 +244,6 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
 	  }
 	}
       }
-=======
-      else if(category==eMuMuNoSel) { if(pfCombIso2>0.12*(lep2->Pt())) continue; else pass=kTRUE; }
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       else if(category==eMuSta)     { continue; }
       else                          { if(pfCombIso2>0.12*(lep2->Pt())) continue; else pass=kFALSE; }
       
@@ -369,11 +343,8 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   delete infile;
   infile=0, intree=0;	   
 
-<<<<<<< HEAD
   //hCH->Draw();
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   //--------------------------------------------------------------------------------------------------------------
   // Output
@@ -383,11 +354,7 @@ void selectProbesMuEff(const TString infilename,           // input ntuple
   cout << "* SUMMARY" << endl;
   cout << "*--------------------------------------------------" << endl;
   cout << endl;
-<<<<<<< HEAD
   cout << " N broken: " << nBroken << endl;
-=======
-
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   cout << " Number of probes selected: " << nProbes << endl;
   
   outFile->Write();

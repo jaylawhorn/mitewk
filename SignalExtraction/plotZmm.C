@@ -19,10 +19,7 @@
 #include <TRandom3.h>
 #include <TGaxis.h>
 #include "Math/LorentzVector.h"           // 4-vector class
-<<<<<<< HEAD
 #include <TMath.h>
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 #include "../Utils/MyTools.hh"	          // various helper functions
 #include "../Utils/CPlot.hh"	          // helper class for plots
@@ -61,17 +58,10 @@ void plotZmm(const TString  outputDir,   // output directory
   vector<TString> fnamev;
   vector<Int_t>   typev;
   
-<<<<<<< HEAD
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zmumu/ntuples/data_select.root"); typev.push_back(eData);
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zmumu/ntuples/zmm_select.root");  typev.push_back(eZmm);
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zmumu/ntuples/ewk_select.root");  typev.push_back(eEWK);
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zmumu/ntuples/top_select.root");  typev.push_back(eEWK);
-=======
-  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zmumu/ntuples/data_select.root"); typev.push_back(eData);
-  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zmumu/ntuples/zmm_select.root");  typev.push_back(eZmm);
-  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zmumu/ntuples/ewk_select.root");  typev.push_back(eEWK);
-  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zmumu/ntuples/top_select.root");  typev.push_back(eEWK);
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   //
   // Fit options
@@ -79,21 +69,13 @@ void plotZmm(const TString  outputDir,   // output directory
   const Int_t    NBINS     = 60;
   const Double_t MASS_LOW  = 60;
   const Double_t MASS_HIGH = 120;  
-<<<<<<< HEAD
   const Double_t PT_CUT    = 30;
-=======
-  const Double_t PT_CUT    = 25;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT   = 2.1;
   
   // plot output file format
   const TString format("png");
 
-<<<<<<< HEAD
   Float_t count = 0;
-=======
-  Int_t yield = 0;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
    
   //--------------------------------------------------------------------------------------------------------------
   // Main analysis code 
@@ -185,12 +167,7 @@ void plotZmm(const TString  outputDir,   // output directory
       if((category==eMuMu2HLT) || (category==eMuMu1HLT)) {
         if(typev[ifile]==eData) { 
 	  hData->Fill(mass); 
-<<<<<<< HEAD
 	  count+=weight;
-=======
-
-	  yield++;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	
 	} else {
 	  LorentzVector slep1 = (*lep1);
@@ -268,17 +245,10 @@ void plotZmm(const TString  outputDir,   // output directory
 
   CPlot plotZmumuDiff("zmm","","M(#mu^{+}#mu^{-}) [GeV/c^{2}]","#chi");
   plotZmumuDiff.AddHist1D(hZmumuDiff,"EX0",ratioColor);
-<<<<<<< HEAD
   plotZmumuDiff.SetYRange(-20,20);
   plotZmumuDiff.AddLine(MASS_LOW, 0,MASS_HIGH, 0,kBlack,1);
   plotZmumuDiff.AddLine(MASS_LOW, 10,MASS_HIGH, 10,kBlack,3);
   plotZmumuDiff.AddLine(MASS_LOW,-10,MASS_HIGH,-10,kBlack,3);
-=======
-  plotZmumuDiff.SetYRange(-8,8);
-  plotZmumuDiff.AddLine(MASS_LOW, 0,MASS_HIGH, 0,kBlack,1);
-  plotZmumuDiff.AddLine(MASS_LOW, 5,MASS_HIGH, 5,kBlack,3);
-  plotZmumuDiff.AddLine(MASS_LOW,-5,MASS_HIGH,-5,kBlack,3);
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotZmumuDiff.Draw(c,kTRUE,format,2);
   
   CPlot plotZmumu2("zmmlog","","",ylabel);
@@ -301,13 +271,7 @@ void plotZmm(const TString  outputDir,   // output directory
   cout << "* SUMMARY" << endl;
   cout << "*--------------------------------------------------" << endl;  
   cout << endl;
-<<<<<<< HEAD
   cout << " Yield is " << count << " +- " << TMath::Sqrt(count) << endl;
-=======
-
-  cout << " The Zmm event yield is " << yield << "." << endl;
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   cout << endl;
   cout << "  <> Output saved in " << outputDir << "/" << endl;    
   cout << endl;     

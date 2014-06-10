@@ -1,13 +1,8 @@
 #ifndef EWKANA_UTILS_LEPTONIDCUTS_HH
 #define EWKANA_UTILS_LEPTONIDCUTS_HH
 
-<<<<<<< HEAD
 #include "EWKAna/Ntupler/interface/TElectron.hh"
 #include "EWKAna/Ntupler/interface/TMuon.hh"
-=======
-#include "../Ntupler/interface/TElectron.hh"
-#include "../Ntupler/interface/TMuon.hh"
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include <TMath.h>
 #include <cassert>
 		   

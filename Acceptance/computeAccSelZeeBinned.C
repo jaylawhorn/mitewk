@@ -25,7 +25,6 @@
 #include "Math/LorentzVector.h"     // 4-vector class
 
 // define structures to read in ntuple
-<<<<<<< HEAD
 #include "EWKAna/Ntupler/interface/EWKAnaDefs.hh"
 #include "EWKAna/Ntupler/interface/TEventInfo.hh"
 #include "EWKAna/Ntupler/interface/TGenInfo.hh"
@@ -33,15 +32,6 @@
 
 // helper functions for lepton ID selection
 #include "EWKAna/Utils/LeptonIDCuts.hh"
-=======
-#include "../Ntupler/interface/EWKAnaDefs.hh"
-#include "../Ntupler/interface/TEventInfo.hh"
-#include "../Ntupler/interface/TGenInfo.hh"
-#include "../Ntupler/interface/TElectron.hh"
-
-// helper functions for lepton ID selection
-#include "../Utils/LeptonIDCuts.hh"
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 // helper class to handle efficiency tables
 #include "CEffUser1D.hh"
@@ -64,18 +54,13 @@ void computeAccSelZeeBinned(const TString conf,            // input file
 
   const Double_t MASS_LOW   = 60;
   const Double_t MASS_HIGH  = 120;
-<<<<<<< HEAD
   const Double_t PT_CUT     = 30;
-=======
-  const Double_t PT_CUT     = 25;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT    = 2.5;
   const Double_t ELE_MASS   = 0.000511;
   const Double_t ETA_BARREL = 1.4442;
   const Double_t ETA_ENDCAP = 1.566;
   
   // efficiency files
-<<<<<<< HEAD
   const TString dataHLTEffName     = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_EleHLTEff/analysis/eff.root";
   const TString dataHLTEffName_pos = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_EleHLTEff_pos/analysis/eff.root";
   const TString dataHLTEffName_neg = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_EleHLTEff_neg/analysis/eff.root";
@@ -89,21 +74,6 @@ void computeAccSelZeeBinned(const TString conf,            // input file
   const TString zeeGsfSelEffName      = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zee_EleGsfSelEff/analysis/eff.root";
   const TString zeeGsfSelEffName_pos  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zee_EleGsfSelEff_pos/analysis/eff.root";
   const TString zeeGsfSelEffName_neg  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zee_EleGsfSelEff_neg/analysis/eff.root";
-=======
-  const TString dataHLTEffName     = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_EleHLTEff/analysis/eff.root";
-  const TString dataHLTEffName_pos = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_EleHLTEff_pos/analysis/eff.root";
-  const TString dataHLTEffName_neg = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_EleHLTEff_neg/analysis/eff.root";
-  const TString zeeHLTEffName      = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zee_EleHLTEff/analysis/eff.root";
-  const TString zeeHLTEffName_pos  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zee_EleHLTEff_pos/analysis/eff.root";
-  const TString zeeHLTEffName_neg  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zee_EleHLTEff_neg/analysis/eff.root";
-  
-  const TString dataGsfSelEffName     = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_EleGsfSelEff/analysis/eff.root";
-  const TString dataGsfSelEffName_pos = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_EleGsfSelEff_pos/analysis/eff.root";
-  const TString dataGsfSelEffName_neg = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_EleGsfSelEff_neg/analysis/eff.root";
-  const TString zeeGsfSelEffName      = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zee_EleGsfSelEff/analysis/eff.root";
-  const TString zeeGsfSelEffName_pos  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zee_EleGsfSelEff_pos/analysis/eff.root";
-  const TString zeeGsfSelEffName_neg  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zee_EleGsfSelEff_neg/analysis/eff.root";
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     
 
   //--------------------------------------------------------------------------------------------------------------
@@ -243,13 +213,8 @@ void computeAccSelZeeBinned(const TString conf,            // input file
       nEvtsv[ifile]+=weight;
     
       // trigger requirement               
-<<<<<<< HEAD
       ULong_t trigger = kHLT_Ele27_WP80;
       ULong_t trigObj = kHLT_Ele27_WP80Obj;   
-=======
-      ULong_t trigger = kHLT_Ele22_CaloIdL_CaloIsoVL;
-      ULong_t trigObj = kHLT_Ele22_CaloIdL_CaloIsoVL_EleObj;   
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       if(!(info->triggerBits & trigger)) continue;
       
       // good vertex requirement

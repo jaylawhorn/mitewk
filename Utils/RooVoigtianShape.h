@@ -1,11 +1,7 @@
 /*****************************************************************************
  * Project: RooFit                                                           *
  * Package: RooFitModels                                                     *
-<<<<<<< HEAD
  *    File: $Id: RooVoigtianShape.h,v 1.1 2012/04/17 06:53:22 ksung Exp $
-=======
- *    File: $Id: RooVoigtianShape.h,v 1.1 2013/08/18 18:32:56 klawhorn Exp $
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
  * Authors:                                                                  *
  *   WV, Wouter Verkerke, UC Santa Barbara, verkerke@slac.stanford.edu       *
  *   DK, David Kirkby,    UC Irvine,         dkirkby@uci.edu                 *

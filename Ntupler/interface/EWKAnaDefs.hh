@@ -70,7 +70,6 @@ enum EQualityBit
 
 enum ETriggerBit
 {  
-<<<<<<< HEAD
 
   // SingleMu
   kHLT_IsoMu24_eta2p1 = 1UL<<0,
@@ -82,31 +81,14 @@ enum ETriggerBit
   // DoubleElectron
   kHLT_Ele17_CaloIdL_CaloIsoVL = 1UL<<3
 
-=======
-  // SingleMu                                                                                                                                           
-  kHLT_IsoMu24_eta2p1 = 1UL<<0,
-  // SingleElectron                                                                                                                                     
-  kHLT_Ele27_WP80 = 1UL<<1,
-
-  // DoubleMu                                                                                                                                           
-  kHLT_Mu17_TkMu8 = 1UL<<2,
-  // DoubleElectron                                                                                                                                     
-  kHLT_Ele17_CaloIdL_CaloIsoVL = 1UL<<3
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 };
 
 enum ETriggerObjBit
 { 
-<<<<<<< HEAD
 
   //SingleMu
   kHLT_IsoMu24_eta2p1Obj = 1UL<<0,
   //SingleElectron
-=======
-  //SingleMu                                                                                                                                            
-  kHLT_IsoMu24_eta2p1Obj = 1UL<<0,
-  //SingleElectron                                                                                                                                      
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   kHLT_Ele27_WP80Obj     = 1UL<<1
 
 };

@@ -18,12 +18,7 @@ namespace mithep
       Float_t   pvx, pvy, pvz;		             // best primary vertex
       Float_t   bsx, bsy, bsz;		             // beamspot
       Float_t   pfMET, pfMETphi, pfSumET;	     // particle flow MET
-<<<<<<< HEAD
       Float_t   mvaMET, mvaMETphi;                   // mva MET
-=======
-      // added for mvaMET
-      Float_t mvaMET, mvaMETphi;                     // mva MET
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       Float_t   trkMET, trkMETphi, trkSumET;         // track MET
       Float_t   rhoLowEta, rhoHighEta;               // average energy density for isolation correction
       ULong64_t triggerBits;		             // HLT trigger bits

@@ -43,11 +43,7 @@ SCNtuplerMod::SCNtuplerMod(const char *name, const char *title):
   fMCEvtInfoName (Names::gkMCEvtInfoBrn),
   fMuonName      (Names::gkMuonBrn),
   fElectronName  (Names::gkElectronBrn),
-<<<<<<< HEAD
   fHPSTauName    ("HPSTaus"),
-=======
-  fHPSTauName    ("HPSTaus"), // added for mvaMET
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   fPrimVtxName   (Names::gkPVBrn),
   fBeamSpotName  (Names::gkBeamSpotBrn),
   fPFJetName     (Names::gkPFJetBrn),
@@ -64,11 +60,7 @@ SCNtuplerMod::SCNtuplerMod(const char *name, const char *title):
   fMCEvtInfo     (0),
   fMuons         (0),
   fElectrons     (0),
-<<<<<<< HEAD
   fPFTaus        (0),
-=======
-  fPFTaus        (0), // added for mvaMET
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   fPrimVerts     (0),
   fBeamSpot      (0),
   fPFJets        (0), 
@@ -93,13 +85,8 @@ SCNtuplerMod::SCNtuplerMod(const char *name, const char *title):
   fEleEtMax      (1000),
   fEleEtaMin     (-3),
   fEleEtaMax     (3),
-<<<<<<< HEAD
   fPFTauEtMin    (15),
   fPFTauEtaMax   (3),
-=======
-  fPFTauEtMin    (15), // added for mvaMET
-  fPFTauEtaMax   (3),  // ditto
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   fJetPtMin      (15),
   fSCEtMin       (10),
   fMinNTracksFit (0),
@@ -137,10 +124,7 @@ void SCNtuplerMod::Begin()
 //--------------------------------------------------------------------------------------------------
 void SCNtuplerMod::SlaveBegin()
 {
-<<<<<<< HEAD
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //
   // Request BAMBU branches
   //
@@ -148,10 +132,7 @@ void SCNtuplerMod::SlaveBegin()
   ReqBranch(fMCEvtInfoName,       fMCEvtInfo);
   ReqBranch(fMuonName,            fMuons);
   ReqBranch(fElectronName,        fElectrons);
-<<<<<<< HEAD
   ReqBranch(fHPSTauName,          fPFTaus);
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   ReqBranch(fPrimVtxName,         fPrimVerts);
   ReqBranch(fBeamSpotName,        fBeamSpot);
   ReqBranch(fPFJetName,           fPFJets);
@@ -164,11 +145,6 @@ void SCNtuplerMod::SlaveBegin()
   ReqBranch(fTracksName,          fTracks);
   ReqBranch(fBarrelSCName,        fBarrelSC);
   ReqBranch(fEndcapSCName,        fEndcapSC);
-<<<<<<< HEAD
-=======
-  // added for mvaMET
-  ReqBranch(fHPSTauName,          fPFTaus);
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   // Pileup and NoPileup collections of PFCandidates
   fPFPileUp   = new PFCandidateOArr;
@@ -224,7 +200,6 @@ void SCNtuplerMod::SlaveBegin()
 		      "Subdet2HighPt_WithIPInfo_BDTG.weights.xml",  // 1.479 < |eta| < 2.5,   pT > 20
 		      ElectronIDMVA::kWithIPInfo);
 
-<<<<<<< HEAD
   fMVAMet = new MVAMet();
   fMVAMet->Initialize(TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml")),
 		      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml")),
@@ -234,18 +209,6 @@ void SCNtuplerMod::SlaveBegin()
 		      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/gbru1cov_53_Dec2012.root")),
 		      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/gbru2cov_53_Dec2012.root")),JetIDMVA::k53MET);
   
-=======
-  // added for mvaMET
-  fMVAMet = new MVAMet();
-  fMVAMet->Initialize(TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml")),
-                      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml")),
-                      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/Utils/python/JetIdParams_cfi.py")),
-                      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/gbrmet_53_Dec2012.root")),
-                      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/gbrmetphi_53_Dec2012.root")),
-                      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/gbru1cov_53_Dec2012.root")),
-                      TString(getenv("CMSSW_BASE")+string("/src/MitPhysics/data/gbru2cov_53_Dec2012.root")),JetIDMVA::k53MET);
-
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   fLastRunLumi = RunLumiRangeMap::RunLumiPairType(0,0);
 }
 
@@ -271,13 +234,7 @@ void SCNtuplerMod::SlaveTerminate()
   
   delete fJetCorrector;
   delete fEleMVA;
-<<<<<<< HEAD
   
-=======
-  // added for mvaMET
-  delete fMVAMet;
-
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //
   // Dump JSON file
   //
@@ -305,10 +262,7 @@ void SCNtuplerMod::EndRun()
 //--------------------------------------------------------------------------------------------------
 void SCNtuplerMod::Process()
 {
-<<<<<<< HEAD
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   RunLumiRangeMap::RunLumiPairType rl(GetEventHeader()->RunNum(), GetEventHeader()->LumiSec());
   if(rl!=fLastRunLumi) {
     fLastRunLumi = rl;
@@ -324,10 +278,7 @@ void SCNtuplerMod::Process()
   LoadBranch(fEndcapSCName);
   LoadBranch(fMuonName);
   LoadBranch(fElectronName);
-<<<<<<< HEAD
   LoadBranch(fHPSTauName);
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   LoadBranch(fPrimVtxName);
   LoadBranch(fBeamSpotName);
   LoadBranch(fPFJetName);
@@ -337,11 +288,6 @@ void SCNtuplerMod::Process()
   LoadBranch(fPUEnergyDensityName);
   LoadBranch(fPFCandidateName);
   LoadBranch(fTracksName);
-<<<<<<< HEAD
-=======
-  // added for mvaMET
-  LoadBranch(fHPSTauName);
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   if(!fIsData)
     LoadBranch(fPileupName);
 
@@ -361,10 +307,7 @@ void SCNtuplerMod::Process()
   //
   // Get HLT info. Trigger objects can be matched by name to the corresponding trigger that passed.
   //
-<<<<<<< HEAD
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   ULong64_t trigbits=0;
   if(HasHLTInfo()) {
     const TriggerTable *hltTable = GetHLTTable();
@@ -552,14 +495,8 @@ void SCNtuplerMod::Process()
   }
   TLorentzVector trkmet; trkmet.SetPxPyPzE(trkMetx,trkMety,0,0);
 
-<<<<<<< HEAD
   Met mvaMet = fMVAMet->GetMet(fMuons,fElectrons,fPFTaus,fPFCandidates,fPFJets,0,fPrimVerts,fPFMet,fJetCorrector,fPUEnergyDensity);
 
-=======
-  // added for mvaMET
-  Met mvaMet = fMVAMet->GetMet(fMuons,fElectrons,fPFTaus,fPFCandidates,fPFJets,0,fPrimVerts,fPFMet,fJetCorrector,fPUEnergyDensity);
-        
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //
   // Identify bunch crossing 0 in PU info
   //
@@ -595,20 +532,11 @@ void SCNtuplerMod::Process()
   fEventInfo.trkMET       = trkmet.Pt();
   fEventInfo.trkMETphi    = trkmet.Phi();
   fEventInfo.trkSumET     = trkSumET;
-<<<<<<< HEAD
   fEventInfo.mvaMET       = mvaMet.Pt();
   fEventInfo.mvaMETphi    = mvaMet.Phi();
   fEventInfo.rhoLowEta    = fPUEnergyDensity->At(0)->RhoLowEta();
   fEventInfo.rhoHighEta   = fPUEnergyDensity->At(0)->RhoHighEta();
   fEventInfo.hasGoodPV    = hasGoodPV;
-=======
-  fEventInfo.rhoLowEta    = fPUEnergyDensity->At(0)->RhoLowEta();
-  fEventInfo.rhoHighEta   = fPUEnergyDensity->At(0)->RhoHighEta();
-  fEventInfo.hasGoodPV    = hasGoodPV;
-  // added for mvaMET
-  fEventInfo.mvaMET       = mvaMet.Pt();
-  fEventInfo.mvaMETphi    = mvaMet.Phi();
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   // Fill the tree
   fEventTree->Fill();
@@ -966,11 +894,8 @@ void SCNtuplerMod::FillPV(const Vertex *pv)
 //--------------------------------------------------------------------------------------------------
 ULong64_t SCNtuplerMod::MatchHLT(const Double_t eta, const Double_t phi)
 {
-<<<<<<< HEAD
 
   //std::cout << "match hlt start" << std::endl;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   ULong64_t bits = 0;
   
   const Double_t hltMatchR = 0.2;
@@ -989,7 +914,6 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t eta, const Double_t phi)
    
       while(to) {             
         if(to->IsHLT()) {          
-<<<<<<< HEAD
 	  //std::cout << "it is hlt" << std:: endl;
 	  if(fTriggerObjNames1v[itrig].Length()>0 && fTriggerObjNames1v[itrig].CompareTo(to->ModuleName())==0) {
 	    Bool_t match = kTRUE;
@@ -1004,19 +928,10 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t eta, const Double_t phi)
 	    std::cout << "eta-phi matching " << match << std::endl;
 	    if(match) bits |= fTriggerObjIds1v[itrig];
 	    std::cout << "last line " << match << std::endl;
-=======
-	  
-	  if(fTriggerObjNames1v[itrig].Length()>0 && fTriggerObjNames1v[itrig].CompareTo(to->ModuleName())==0) {
-	    Bool_t match = kTRUE;
-	    if(to->Pt() < fTriggerObjMinPt1v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
-	    if(MathUtils::DeltaR(phi,eta,to->Phi(),to->Eta()) > hltMatchR) match=kFALSE;  // eta-phi matching
-	    if(match) bits |= fTriggerObjIds1v[itrig];
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	  }
 	  
 	  if(fTriggerObjNames2v[itrig].Length()>0 && fTriggerObjNames2v[itrig].CompareTo(to->ModuleName())==0) {
 	    Bool_t match = kTRUE;
-<<<<<<< HEAD
 	    //std::cout << "trigger object match 2!" << std::endl;
 	    if(to->Pt() < fTriggerObjMinPt2v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
 	    //std::cout << "pt threshold " << match << std::endl;
@@ -1024,16 +939,10 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t eta, const Double_t phi)
 	    //std::cout << "eta-phi matching " << match << std::endl;
 	    if(match) bits |= fTriggerObjIds2v[itrig];
 	    //std::cout << "last line " << match << std::endl;
-=======
-	    if(to->Pt() < fTriggerObjMinPt2v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
-	    if(MathUtils::DeltaR(phi,eta,to->Phi(),to->Eta()) > hltMatchR) match=kFALSE;  // eta-phi matching
-	    if(match) bits |= fTriggerObjIds2v[itrig];
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	  }
 	  
 	  if(fTriggerObjNames1v[itrig].Length()==0 && fTriggerObjNames2v[itrig].Length()==0) {
 	    Bool_t match = kTRUE;
-<<<<<<< HEAD
 	    //std::cout << "trigger object match 3!" << std::endl;
 	    if(to->Pt() < fTriggerObjMinPt1v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
 	    //std::cout << "pt threshold " << match << std::endl;
@@ -1041,22 +950,13 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t eta, const Double_t phi)
 	    //std::cout << "eta-phi matching " << match << std::endl;
 	    if(match) bits |= fTriggerObjIds1v[itrig];
 	    //std::cout << "last line " << match << std::endl;
-=======
-	    if(to->Pt() < fTriggerObjMinPt1v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
-	    if(MathUtils::DeltaR(phi,eta,to->Phi(),to->Eta()) > hltMatchR) match=kFALSE;  // eta-phi matching
-	    if(match) bits |= fTriggerObjIds1v[itrig];
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
           }
         } 
         to = dynamic_cast<const TriggerObject*>(iter.Next());
       }    
     }
   }
-<<<<<<< HEAD
   //std::cout << "bits " << bits << std::endl;
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   return bits;
 }
 
@@ -1084,10 +984,7 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t pt, const Double_t eta, const Do
 	  
 	  if(fTriggerObjNames1v[itrig].Length()>0 && fTriggerObjNames1v[itrig].CompareTo(to->ModuleName())==0) {
 	    Bool_t match = kTRUE;
-<<<<<<< HEAD
 	    std::cout << "trigger object match!" << std::endl;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	    if(to->Pt() < fTriggerObjMinPt1v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
 	    if(MathUtils::DeltaR(phi,eta,to->Phi(),to->Eta()) > hltMatchR) match=kFALSE;  // eta-phi matching
 	    if(fabs(pt - to->Pt())>hltMatchPtFrac*(to->Pt()))              match=kFALSE;  // pT matching
@@ -1096,10 +993,7 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t pt, const Double_t eta, const Do
 	  
 	  if(fTriggerObjNames2v[itrig].Length()>0 && fTriggerObjNames2v[itrig].CompareTo(to->ModuleName())==0) {
 	    Bool_t match = kTRUE;
-<<<<<<< HEAD
 	    std::cout << "trigger object match!" << std::endl;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	    if(to->Pt() < fTriggerObjMinPt2v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
 	    if(MathUtils::DeltaR(phi,eta,to->Phi(),to->Eta()) > hltMatchR) match=kFALSE;  // eta-phi matching
 	    if(fabs(pt - to->Pt())>hltMatchPtFrac*(to->Pt()))              match=kFALSE;  // pT matching
@@ -1108,10 +1002,7 @@ ULong64_t SCNtuplerMod::MatchHLT(const Double_t pt, const Double_t eta, const Do
 	  
 	  if(fTriggerObjNames1v[itrig].Length()==0 && fTriggerObjNames2v[itrig].Length()==0) {
 	    Bool_t match = kTRUE;
-<<<<<<< HEAD
 	    std::cout << "trigger object match!" << std::endl;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	    if(to->Pt() < fTriggerObjMinPt1v[itrig])                       match=kFALSE;  // minimum pT threshold on trigger object
 	    if(MathUtils::DeltaR(phi,eta,to->Phi(),to->Eta()) > hltMatchR) match=kFALSE;  // eta-phi matching
 	    if(fabs(pt - to->Pt())>hltMatchPtFrac*(to->Pt()))              match=kFALSE;  // pT matching

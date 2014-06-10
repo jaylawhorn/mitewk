@@ -3,11 +3,7 @@
 #==============================================================
 
 # directory of probes ntuples
-<<<<<<< HEAD
 NTUPLEDIR=/scratch/klute/ewk/TagAndProbeExample
-=======
-NTUPLEDIR=/data/blue/ksung/TagAndProbeExample
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 #
 # Electron selection efficiencies (for H->ZZ->2l2v) in Summer11 Madgraph sample

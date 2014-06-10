@@ -4,7 +4,6 @@ HFLUMI=0.018729
 PIXLUMI=0.018479
 LUMI=${HFLUMI}
 
-<<<<<<< HEAD
 #const TString  outputDir,   // output directory
 #const Double_t lumi,        // integrated luminosity (/fb)
 #const Bool_t recoil,        // 1 = do recoil corrections, 0 = no recoil corrections
@@ -34,16 +33,5 @@ root -l -q plotZee.C+\(\"Zplots/Zee\",${SMU_LUMI}\)
 #root -l -q fitWe.C+\(\"Wenu/PF_p1sig\",${SEL_LUMI},1,0,1\)
 #root -l -q fitWe.C+\(\"Wenu/PF_m1sig\",${SEL_LUMI},1,0,-1\)
 
-=======
-root -l -q fitWm.C+\(\"Wmunu\",${LUMI},0\)
-#root -l -q fitZmm.C+\(\"Zmumu\",${LUMI},0\)
-
-root -l -q fitWe.C+\(\"Wenu\",${LUMI},0\)
-#root -l -q fitZee.C+\(\"Zee\",${LUMI},0\)
-#root -l -q fitZee2.C+\(\"May23/Zee2\",${LUMI},0\)
-
-#root -l -q plotZmm.C+\(\"Zmumu\",${LUMI}\)
-#root -l -q plotZee.C+\(\"Zee\",${LUMI}\)
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 rm *.so *.d

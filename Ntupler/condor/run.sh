@@ -2,7 +2,6 @@
 #---------------------------------------------------------------------------------------------------
 # Execute one job (works interactively and when executed in condor)
 #---------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
    runMacro=$1
  catalogDir=$2
        book=$3
@@ -20,21 +19,6 @@ skipHLTFail=${13}
 if [ ".${14}" != "." ]
 then
   nEvents=${14}
-=======
-  runMacro=$1
-catalogDir=$2
-      book=$3
-   dataset=$4
-      skim=$5
-   fileset=$6
-outputName=$7
- outputDir=$8
- runTypeId=$9
-   nEvents=-1
-if [ ".${10}" != "." ]
-then
-  nEvents=${10}
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 fi
 
 h=`basename $0`
@@ -57,28 +41,17 @@ workDir=`pwd`
 cd   $CMSSW_BASE
 eval `scram runtime -sh`
 
-<<<<<<< HEAD
 RUNDIR=/home/klawhorn/cms/condor
-=======
-RUNDIR=/home/klawhorn/cms/cmssw/031/CMSSW_5_3_10_patch1/src/EWKAna/Ntupler/macros
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 # make sure to copy what we need locally if we are not in the original area (when in condor)
 pwd
 cd $workDir
 if [ "$workDir" != $RUNDIR ]
 then
-<<<<<<< HEAD
     cp $RUNDIR/cacheFileset.sh ./
     cp $RUNDIR/${runMacro} ./
     cp $RUNDIR/rootlogon.C ./
     cp $RUNDIR/Subdet*.xml ./
-=======
-    cp $RUNDIR/${runMacro} ./
-    cp $RUNDIR/rootlogon.C ./
-    #cp $RUNDIR/START50_V15_*_AK5PF.txt ./
-    #cp $RUNDIR/Subdet*BDTG.weights.xml ./
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 fi
 
 # make sure to get the ticket
@@ -101,17 +74,10 @@ export KRB5CCNAME=FILE:/tmp/krb5cc_${id}
 echo " "; echo "${h}: Starting root job now"; echo " ";
 echo \
   root -b -l -q rootlogon.C \
-<<<<<<< HEAD
   ${runMacro}+\(\"$fileset\",\"$skim\",\"$dataset\",\"$book\",\"$catalogDir\",\"$outputName\",$nEvents,$isData,$useGen,$fsrmode,$skipHLTFail\)
 
   root -b -l -q rootlogon.C \
   ${runMacro}+\(\"$fileset\",\"$skim\",\"$dataset\",\"$book\",\"$catalogDir\",\"$outputName\",$nEvents,$isData,$useGen,$fsrmode,$skipHLTFail\)
-=======
-  ${runMacro}+\(\"$fileset\",\"$skim\",\"$dataset\",\"$book\",\"$catalogDir\"\,\"$outputName\",$nEvents\)
-
-  root -b -l -q rootlogon.C \
-  ${runMacro}+\(\"$fileset\",\"$skim\",\"$dataset\",\"$book\",\"$catalogDir\"\,\"$outputName\",$nEvents\)
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 # get the return code from the root job
 status=`echo $?`

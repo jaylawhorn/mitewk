@@ -137,11 +137,7 @@ void plotEff(const TString conf,            // input binning file
 	     const UInt_t  runNumLo=0,      // lower bound of run range
 	     const UInt_t  runNumHi=999999  // upper bound of run range
 ) {
-<<<<<<< HEAD
   gBenchmark->Start("plotEff");
-=======
-  //gBenchmark->Start("plotEff");
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 
   //--------------------------------------------------------------------------------------------------------------
@@ -155,19 +151,11 @@ void plotEff(const TString conf,            // input binning file
   // fit mass region
   const Double_t fitMassLo = massLo;
   const Double_t fitMassHi = massHi;
-<<<<<<< HEAD
   
   // Weights for PU-reweighting
   const TString pufnameA   ("/scratch/klute/ewk/TagAndProbeExample/PileupReweighting.Summer11DYmm_To_Run2011A.root");
   const TString pufnameB   ("/scratch/klute/ewk/TagAndProbeExample/PileupReweighting.Summer11DYmm_To_Run2011B.root");
   const TString pufnameFull("/scratch/klute/ewk/TagAndProbeExample/PileupReweighting.Summer11DYmm_To_Full2011.root");
-=======
-
-  // Weights for PU-reweighting
-  //const TString pufnameA   ("/data/blue/ksung/TagAndProbeExample/PileupReweighting.Summer11DYmm_To_Run2011A.root");
-  //const TString pufnameB   ("/data/blue/ksung/TagAndProbeExample/PileupReweighting.Summer11DYmm_To_Run2011B.root");
-  //const TString pufnameFull("/data/blue/ksung/TagAndProbeExample/PileupReweighting.Summer11DYmm_To_Full2011.root");
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   // efficiency error calculation method
   // method: 0 -> Clopper-Pearson
@@ -176,22 +164,14 @@ void plotEff(const TString conf,            // input binning file
   
   // y-axis range
   const Double_t yhigh = 1.03;
-<<<<<<< HEAD
   const Double_t ylow  = 0.5;
-=======
-  const Double_t ylow  = 0.6;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   // bin edges for kinematic variables
   vector<Double_t> ptBinEdgesv;
   vector<Double_t> etaBinEdgesv;
   vector<Double_t> phiBinEdgesv;
   vector<Double_t> npvBinEdgesv;
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //
   // parse binning file
   //
@@ -225,10 +205,6 @@ void plotEff(const TString conf,            // input binning file
   gSystem->mkdir(outputDir,kTRUE);
   CPlot::sOutDir = outputDir + TString("/plots");
   
-<<<<<<< HEAD
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   //--------------------------------------------------------------------------------------------------------------
   // Main analysis code 
@@ -259,11 +235,7 @@ void plotEff(const TString conf,            // input binning file
   
   char tname[50];
   Float_t mass,wgt;
-<<<<<<< HEAD
     
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   vector<TTree*> passTreePtv;
   vector<TTree*> failTreePtv;
   for(UInt_t ibin=0; ibin<ptNbins; ibin++) {
@@ -353,7 +325,6 @@ void plotEff(const TString conf,            // input binning file
     failTreeNPVv[ibin]->Branch("w",&wgt,"w/F");
     failTreeNPVv[ibin]->SetDirectory(0);
   }  
-<<<<<<< HEAD
 
   //
   // Pile-up reweighting functions 
@@ -367,21 +338,6 @@ void plotEff(const TString conf,            // input binning file
     assert(pufile);
     puWeights = (TH1D*)pufile->Get("puWeights");
   }
-=======
-  
-  //
-  // Pile-up reweighting functions 
-  //
-  //TFile *pufile    = 0;
-  TH1D  *puWeights = 0;
-  //if(abs(doPU)==1) pufile = new TFile(pufnameA);
-  //if(abs(doPU)==2) pufile = new TFile(pufnameB);
-  //if(abs(doPU)==3) pufile = new TFile(pufnameFull);
-  //if(doPU!=0) {
-  //  assert(pufile);
-  //  puWeights = (TH1D*)pufile->Get("puWeights");
-  //}
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   //
   // Generate histogram templates from MC if necessary
@@ -443,11 +399,7 @@ void plotEff(const TString conf,            // input binning file
     for(UInt_t ibin=0; ibin<npvNbins; ibin++)
       if((data.npv >= npvBinEdgesv[ibin]) && (data.npv < npvBinEdgesv[ibin+1]))
         inpv = ibin;
-<<<<<<< HEAD
 //    if(inpv<0) continue;
-=======
-    if(inpv<0) continue;
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
         
     if(data.pass) {
       passTreePtv[ipt]->Fill();
@@ -455,31 +407,19 @@ void plotEff(const TString conf,            // input binning file
       passTreePhiv[iphi]->Fill();
       passTreeEtaPtv[ipt*etaNbins + ieta]->Fill();
       passTreeEtaPhiv[iphi*etaNbins + ieta]->Fill();
-<<<<<<< HEAD
 if(inpv>=0)      passTreeNPVv[inpv]->Fill();
-=======
-      if(inpv>=0)      passTreeNPVv[inpv]->Fill();
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     } else {
       failTreePtv[ipt]->Fill();
       failTreeEtav[ieta]->Fill();
       failTreePhiv[iphi]->Fill();
       failTreeEtaPtv[ipt*etaNbins + ieta]->Fill();
       failTreeEtaPhiv[iphi*etaNbins + ieta]->Fill();
-<<<<<<< HEAD
 if(inpv>=0)      failTreeNPVv[inpv]->Fill();
-=======
-      if(inpv>=0)      failTreeNPVv[inpv]->Fill();
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     }    
   }  
   delete infile;
   infile=0, eventTree=0;
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   //
   // Compute efficiencies and make plots 
@@ -517,11 +457,7 @@ if(inpv>=0)      failTreeNPVv[inpv]->Fill();
       CPlot plotEffEta("effeta","","probe #eta","#varepsilon");
       if(doAbsEta) plotEffEta.SetXTitle("probe |#eta|");
       plotEffEta.AddGraph(grEffEta,"",kBlack);
-<<<<<<< HEAD
       plotEffEta.SetYRange(0.8,1.04);
-=======
-      plotEffEta.SetYRange(0.2,1.04);
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       plotEffEta.Draw(c,kTRUE,format);
     
       CPlot plotEffEta2("effeta2","","probe #eta","#varepsilon");
@@ -530,11 +466,7 @@ if(inpv>=0)      failTreeNPVv[inpv]->Fill();
       plotEffEta2.SetYRange(ylow,yhigh);
       plotEffEta2.Draw(c,kTRUE,format);    
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     // efficiency in phi
     if(opts[2]) {
       grEffPhi = makeEffGraph(phiBinEdgesv, passTreePhiv, failTreePhiv, method, "phi", massLo, massHi, format, doAbsEta);
@@ -645,11 +577,8 @@ if(inpv>=0)      failTreeNPVv[inpv]->Fill();
     
     // efficiency in phi
     if(opts[2]) {
-<<<<<<< HEAD
 
       cout << "first stop on the daisy chain" << endl;
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       grEffPhi = makeEffGraph(phiBinEdgesv, passTreePhiv, failTreePhiv, sigModPass, bkgModPass, sigModFail, bkgModFail, "phi", massLo, massHi, fitMassLo, fitMassHi, format, doAbsEta);
       grEffPhi->SetName("grEffPhi");
       CPlot plotEffPhi("effphi","","probe #phi","#varepsilon");
@@ -724,11 +653,7 @@ if(inpv>=0)      failTreeNPVv[inpv]->Fill();
       plotErrhEtaPhi.Draw(c,kTRUE,format);
     }
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   // Undo scaling of axes before saving to file
   hEffEtaPt->GetYaxis()->SetRangeUser(ptBinEdgesv[0],ptBinEdgesv[ptNbins]);
   hErrlEtaPt->GetYaxis()->SetRangeUser(ptBinEdgesv[0],ptBinEdgesv[ptNbins]);
@@ -844,10 +769,6 @@ if(inpv>=0)      failTreeNPVv[inpv]->Fill();
   cout << endl;  
       
   gBenchmark->Show("plotEff"); 
-<<<<<<< HEAD
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 }  
 
 
@@ -994,11 +915,8 @@ TGraphAsymmErrors* makeEffGraph(const vector<Double_t> &edgesv, const vector<TTr
 		                const TString name, const Double_t massLo, const Double_t massHi, const Double_t fitMassLo, const Double_t fitMassHi,
 				const TString format, const Bool_t doAbsEta)
 {
-<<<<<<< HEAD
   cout << "into fxn one...."; cout.flush();
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const UInt_t n = edgesv.size()-1;
   Double_t xval[n], xerr[n];
   Double_t yval[n], yerrl[n], yerrh[n];
@@ -1023,10 +941,7 @@ TGraphAsymmErrors* makeEffGraph(const vector<Double_t> &edgesv, const vector<TTr
       rfile.close();
 	
     } else {
-<<<<<<< HEAD
       cout << "time for another jump........"; cout.flush();
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       performFit(eff, errl, errh, ibin, edgesv[ibin], edgesv[ibin+1], 0, 0,
 	         passv[ibin], failv[ibin],
 	         sigpass, bkgpass, sigfail, bkgfail, 
@@ -1629,11 +1544,8 @@ void performFit(Double_t &resEff, Double_t &resErrl, Double_t &resErrh,
 		const TString name, const Double_t massLo, const Double_t massHi, const Double_t fitMassLo, const Double_t fitMassHi,
 		const TString format, const Bool_t doAbsEta, TCanvas *cpass, TCanvas *cfail)
 {
-<<<<<<< HEAD
   cout << "HI??????"; cout.flush();
 
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   RooRealVar m("m","mass",fitMassLo,fitMassHi);
   m.setBins(10000);
   
@@ -1733,15 +1645,12 @@ void performFit(Double_t &resEff, Double_t &resErrl, Double_t &resErrh,
   } else if(bkgpass==2) {
     bkgPass = new CErfExpo(m,kTRUE);
     nflpass += 3;
-<<<<<<< HEAD
     if( (name.CompareTo("etapt")==0) ) {//& (ibin==1 || ibin==5) ) {
       ((CErfExpo*)bkgPass)->beta->setVal(0.03);
       ((CErfExpo*)bkgPass)->beta->setMax(0.20);
       //((CErfExpo*)bkgFail)->alfa->setVal(60);
       //((CErfExpo*)bkgFail)->gamma->setVal(0.03);
     }
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
      
   } else if(bkgpass==3) {
     bkgPass = new CDoubleExp(m,kTRUE);
@@ -1788,15 +1697,12 @@ void performFit(Double_t &resEff, Double_t &resErrl, Double_t &resErrh,
   } else if(bkgfail==2) {
     bkgFail = new CErfExpo(m,kFALSE); 
     nflfail += 3;
-<<<<<<< HEAD
     if( (name.CompareTo("etapt")==0) ) {//& (ibin==1 || ibin==5) ) {
       ((CErfExpo*)bkgFail)->beta->setVal(0.03);
       ((CErfExpo*)bkgFail)->beta->setMax(0.07);
     //((CErfExpo*)bkgFail)->alfa->setVal(60);
     //((CErfExpo*)bkgFail)->gamma->setVal(0.03);
     }
-=======
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   } else if(bkgfail==3) {
     bkgFail = new CDoubleExp(m,kFALSE);
@@ -1851,13 +1757,8 @@ void performFit(Double_t &resEff, Double_t &resErrl, Double_t &resErrh,
   RooFitResult *fitResult=0;
   fitResult = totalPdf.fitTo(*dataCombined,
 			     RooFit::Extended(),
-<<<<<<< HEAD
   			     RooFit::Strategy(2),
   			     RooFit::Minos(RooArgSet(eff)),
-=======
-  			     RooFit::Strategy(2), // MINOS STRATEGY
-  			     //RooFit::Minos(RooArgSet(eff)),
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   			     RooFit::Save());
 
  
@@ -1965,11 +1866,7 @@ void performFit(Double_t &resEff, Double_t &resErrl, Double_t &resErrh,
   txtfile << endl;
   printCorrelations(txtfile, fitResult);
   txtfile.close();
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //
   // Clean up
   //
