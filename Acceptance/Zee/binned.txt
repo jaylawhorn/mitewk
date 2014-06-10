@@ -1,0 +1,16 @@
+*
+* SUMMARY
+*--------------------------------------------------
+ Z -> e e
+  Mass window: [60, 120]
+  pT > 30
+  |eta| < 2.5
+
+   ================================================
+    Label: POWHEG
+     File: /scratch/klawhorn/EWKAna/bacon/s12-zeem20-v7a.root
+
+    *** Acceptance ***
+          nominal:  3.76793e+06 / 2.03166e+07 = 0.185461 +/- 8.62298e-05
+     SF corrected: 0.17991 +/- 8.52183e-05
+
