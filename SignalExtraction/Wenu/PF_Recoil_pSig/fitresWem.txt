@@ -1,0 +1,39 @@
+ *** Yields *** 
+Selected: 1355962
+  Signal: 835211.9805 +/- 1012.931151
+     QCD: 435077.1524 +/- 987.5259819
+   Other: 85676.20084 +/- 103.9066666
+
+
+  RooFitResult: minimized FCN value: -12099444.45, estimated distance to minimum: 294.3928956
+                covariance matrix quality: Full, accurate covariance matrix
+
+    Constant Parameter    Value     
+  --------------------  ------------
+                 cewkm    1.0258e-01
+
+    Floating Parameter  InitialValue    FinalValue (+HiError,-LoError)    GblCorr.
+  --------------------  ------------  ----------------------------------  --------
+               a1_qcdm    1.0000e-02    1.8624e-01 (+1.11e-03,--0.00e+00)  <none>
+                 nQCDm    5.4238e+05    4.3508e+05 (+3.24e+03,-2.21e+03)  <none>
+                 nSigm    8.1358e+05    8.3521e+05         +/-  1.70e+03  <none>
+            sigma_qcdm    1.0000e+01    1.6295e+01 (+0.00e+00,-4.34e-02)  <none>
+
+
+  Correlation Matrix
+ --------------------
+   1.0000   0.2494  -0.2315  -0.7141
+   0.2494   1.0000  -0.7947   0.2433
+  -0.2315  -0.7947   1.0000  -0.2259
+  -0.7141   0.2433  -0.2259   1.0000
+
+  Chi2 Test
+ -----------
+       prob = 0.002328
+   chi2/ndf = 1.667
+
+  KS Test
+ ---------
+   prob = 0.1867
+   prob = 0.005 with 1000 pseudo-experiments
+
