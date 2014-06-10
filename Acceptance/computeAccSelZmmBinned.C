@@ -25,6 +25,7 @@
 #include "Math/LorentzVector.h"     // 4-vector class
 
 // define structures to read in ntuple
+<<<<<<< HEAD
 #include "EWKAna/Ntupler/interface/EWKAnaDefs.hh"
 #include "EWKAna/Ntupler/interface/TEventInfo.hh"
 #include "EWKAna/Ntupler/interface/TGenInfo.hh"
@@ -32,6 +33,15 @@
 
 // helper functions for lepton ID selection
 #include "EWKAna/Utils/LeptonIDCuts.hh"
+=======
+#include "../Ntupler/interface/EWKAnaDefs.hh"
+#include "../Ntupler/interface/TEventInfo.hh"
+#include "../Ntupler/interface/TGenInfo.hh"
+#include "../Ntupler/interface/TMuon.hh"
+
+// helper functions for lepton ID selection
+#include "../Utils/LeptonIDCuts.hh"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 // helper class to handle efficiency tables
 #include "CEffUser1D.hh"
@@ -54,11 +64,16 @@ void computeAccSelZmmBinned(const TString conf,      // input file
 
   const Double_t MASS_LOW   = 60;
   const Double_t MASS_HIGH  = 120;
+<<<<<<< HEAD
   const Double_t PT_CUT     = 30;
+=======
+  const Double_t PT_CUT     = 25;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT    = 2.1;
   const Double_t MUON_MASS  = 0.105658369;
   
   // efficiency files
+<<<<<<< HEAD
   const TString dataHLTEffName_pos = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_MuHLTEff_pos/analysis/eff.root";
   const TString dataHLTEffName_neg = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_MuHLTEff_neg/analysis/eff.root";
   const TString zmmHLTEffName_pos  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zmm_MuHLTEff_pos/analysis/eff.root";
@@ -78,6 +93,27 @@ void computeAccSelZmmBinned(const TString conf,      // input file
   const TString dataStaEffName_neg = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_MuStaEff_iso_neg/analysis/eff.root";
   const TString zmmStaEffName_pos  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zmm_MuStaEff_iso_pos/analysis/eff.root";
   const TString zmmStaEffName_neg  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zmm_MuStaEff_iso_neg/analysis/eff.root";
+=======
+  const TString dataHLTEffName_pos = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuHLTEff_pos/analysis/eff.root";
+  const TString dataHLTEffName_neg = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuHLTEff_neg/analysis/eff.root";
+  const TString zmmHLTEffName_pos  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuHLTEff_pos/analysis/eff.root";
+  const TString zmmHLTEffName_neg  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuHLTEff_neg/analysis/eff.root";
+  
+  const TString dataSelEffName_pos = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuSelEff_pos/analysis/eff.root";
+  const TString dataSelEffName_neg = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuSelEff_neg/analysis/eff.root";
+  const TString zmmSelEffName_pos  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuSelEff_pos/analysis/eff.root";
+  const TString zmmSelEffName_neg  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuSelEff_neg/analysis/eff.root";
+  
+  const TString dataTrkEffName_pos = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuTrkEff_pos/analysis/eff.root";
+  const TString dataTrkEffName_neg = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuTrkEff_neg/analysis/eff.root";
+  const TString zmmTrkEffName_pos  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuTrkEff_pos/analysis/eff.root";
+  const TString zmmTrkEffName_neg  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuTrkEff_neg/analysis/eff.root";
+  
+  const TString dataStaEffName_pos = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuStaEff_iso_pos/analysis/eff.root";
+  const TString dataStaEffName_neg = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuStaEff_iso_neg/analysis/eff.root";
+  const TString zmmStaEffName_pos  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuStaEff_iso_pos/analysis/eff.root";
+  const TString zmmStaEffName_neg  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuStaEff_iso_neg/analysis/eff.root";
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   
   //--------------------------------------------------------------------------------------------------------------
@@ -245,8 +281,13 @@ void computeAccSelZmmBinned(const TString conf,      // input file
       nEvtsv[ifile]+=weight;
       
       // trigger requirement               
+<<<<<<< HEAD
       ULong_t trigger = kHLT_IsoMu24_eta2p1;
       ULong_t trigObj = kHLT_IsoMu24_eta2p1Obj;   
+=======
+      ULong_t trigger = kHLT_Mu15_eta2p1;
+      ULong_t trigObj = kHLT_Mu15_eta2p1_MuObj;   
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       if(!(info->triggerBits & trigger)) continue;  
       
       // good vertex requirement

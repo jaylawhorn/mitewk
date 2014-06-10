@@ -53,6 +53,7 @@ void EleScale() {
   enum { eEleEle2HLT=1, eEleEle1HLT, eEleEleNoSel, eEleSC };
   
   TString outputDir = "Results";
+<<<<<<< HEAD
   TString pufname = "/scratch/klawhorn/EWKAnaR12a/weights/s12-zeem20-v7a-pu.root"; 
   
   vector<TString> infilenamev;
@@ -62,6 +63,17 @@ void EleScale() {
   const Double_t MASS_LOW  = 60;
   const Double_t MASS_HIGH = 120;
   const Double_t PT_CUT    = 30;
+=======
+  TString pufname = ""; 
+  
+  vector<TString> infilenamev;
+  infilenamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zee/ntuples/data_select.raw.root");  // data
+  infilenamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zee/ntuples/zee_select.root");       // MC
+  
+  const Double_t MASS_LOW  = 60;
+  const Double_t MASS_HIGH = 120;
+  const Double_t PT_CUT    = 25;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT   = 2.5;
   const Double_t ELE_MASS  = 0.000511;  
   
@@ -70,7 +82,10 @@ void EleScale() {
   scEta_limits.push_back(make_pair(0.4,0.8));
   scEta_limits.push_back(make_pair(0.8,1.2));
   scEta_limits.push_back(make_pair(1.2,1.4442));
+<<<<<<< HEAD
   scEta_limits.push_back(make_pair(1.4442,1.566));
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   scEta_limits.push_back(make_pair(1.566,2.0));
   scEta_limits.push_back(make_pair(2.0,2.5));
 
@@ -85,8 +100,13 @@ void EleScale() {
    
   enum { eData=0, eMC };
   
+<<<<<<< HEAD
   TFile *pufile = new TFile(pufname); assert(pufile);
   TH1D  *puWeights = (TH1D*)pufile->Get("hCorr");
+=======
+//  TFile *pufile = new TFile(pufname); assert(pufile);
+//  TH1D  *puWeights = (TH1D*)pufile->Get("puWeights");
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   char hname[100];
   vector<TH1D*> hMCv, hDatav;  
@@ -140,7 +160,11 @@ void EleScale() {
       Double_t weight = 1;
       if(ifile==eMC) {
         if(!matchGen) continue;
+<<<<<<< HEAD
         //weight *= puWeights->GetBinContent(npu+1);
+=======
+//        weight *= puWeights->GetBinContent(npu+1);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       }
       
       if((category!=eEleEle2HLT) && (category!=eEleEle1HLT)) continue;

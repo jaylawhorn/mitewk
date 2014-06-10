@@ -14,7 +14,10 @@
 #include <TClonesArray.h>           // ROOT array class
 #include <TBenchmark.h>             // class to track macro running statistics
 #include <TVector2.h>               // 2D vector class
+<<<<<<< HEAD
 #include <TH1.h>
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include <TMath.h>                  // ROOT math library
 #include <vector>                   // STL vector class
 #include <iostream>                 // standard I/O
@@ -23,6 +26,7 @@
 #include "Math/LorentzVector.h"     // 4-vector class
 
 #include "ConfParse.hh"             // input conf file parser
+<<<<<<< HEAD
 #include "EWKAna/Utils/CSample.hh"  // helper class to handle samples
 #include "EWKAna/Utils/MyTools.hh"  // various helper functions
 
@@ -32,12 +36,27 @@
 #include "EWKAna/Ntupler/interface/TGenInfo.hh"
 #include "EWKAna/Ntupler/interface/TElectron.hh"
 #include "EWKAna/Ntupler/interface/TVertex.hh"
+=======
+#include "../Utils/CSample.hh"      // helper class to handle samples
+#include "../Utils/MyTools.hh"      // various helper functions
+
+// define structures to read in ntuple
+#include "../Ntupler/interface/EWKAnaDefs.hh"
+#include "../Ntupler/interface/TEventInfo.hh"
+#include "../Ntupler/interface/TGenInfo.hh"
+#include "../Ntupler/interface/TElectron.hh"
+#include "../Ntupler/interface/TVertex.hh"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 // lumi section selection with JSON files
 #include "MitAna/DataCont/interface/RunLumiRangeMap.h"
 
 // helper functions for lepton ID selection
+<<<<<<< HEAD
 #include "EWKAna/Utils/LeptonIDCuts.hh"
+=======
+#include "../Utils/LeptonIDCuts.hh"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #endif
 
 typedef ROOT::Math::LorentzVector<ROOT::Math::PtEtaPhiM4D<double> > LorentzVector;
@@ -64,10 +83,14 @@ void selectWe(const TString conf,        // input file
   
   const Double_t escaleNbins  = 6;
   const Double_t escaleEta[]  = { 0.4,     0.8,     1.2,     1.4442,  2,        2.5 };
+<<<<<<< HEAD
   const Double_t escaleCorr[] = { 1.00053, 1.00156, 1.00319, 1.00586, 1.00294, 1.00577};
 
   TString puCorrDir = "/scratch/klawhorn/EWKAnaR12a/SelPileupCorr/weights/";
   
+=======
+  const Double_t escaleCorr[] = { 1.00284, 1.00479, 1.00734, 1.00851, 1.00001,  0.982898 };
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //--------------------------------------------------------------------------------------------------------------
   // Main analysis code 
   //==============================================================================================================  
@@ -94,7 +117,11 @@ void selectWe(const TString conf,        // input file
   Float_t genVPt, genVPhi, genVy, genVMass;
   Float_t genLepPt, genLepPhi;
   Float_t scale1fb;
+<<<<<<< HEAD
   Float_t met, metPhi, mvaMet, mvaMetPhi, sumEt, mt, u1, u2;
+=======
+  Float_t met, metPhi, sumEt, mt, u1, u2;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   Int_t   q;
   LorentzVector *lep=0;
   ///// electron specific /////
@@ -148,8 +175,11 @@ void selectWe(const TString conf,        // input file
     outTree->Branch("scale1fb", &scale1fb, "scale1fb/F");   // event weight per 1/fb (MC)
     outTree->Branch("met",      &met,      "met/F");        // MET
     outTree->Branch("metPhi",   &metPhi,   "metPhi/F");     // phi(MET)
+<<<<<<< HEAD
     outTree->Branch("mvaMet",   &mvaMet,   "mvaMet/F");     // MET
     outTree->Branch("mvaMetPhi",&mvaMetPhi,"mvaMetPhi/F");  // phi(MET)
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     outTree->Branch("sumEt",    &sumEt,    "sumEt/F");      // Sum ET
     outTree->Branch("mt",       &mt,       "mt/F");         // transverse mass
     outTree->Branch("u1",       &u1,       "u1/F");         // parallel component of recoil
@@ -213,6 +243,7 @@ void selectWe(const TString conf,        // input file
       const Double_t xsec = samp->xsecv[ifile];
       if(xsec>0) weight = 1000.*xsec/(Double_t)eventTree->GetEntries();     
 
+<<<<<<< HEAD
       // more pu corr stuff      
       TH1F* puCorr;
       
@@ -227,6 +258,8 @@ void selectWe(const TString conf,        // input file
                                                  
       }
 
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       //
       // loop over events
       //
@@ -241,8 +274,13 @@ void selectWe(const TString conf,        // input file
         if(hasJSON && !rlrm.HasRunLumi(rl)) continue;  
 
         // trigger requirement               
+<<<<<<< HEAD
         ULong64_t trigger = kHLT_Ele27_WP80;
 	ULong64_t trigObj = kHLT_Ele27_WP80Obj;
+=======
+        ULong64_t trigger = kHLT_Ele22_CaloIdL_CaloIsoVL;
+	ULong64_t trigObj = kHLT_Ele22_CaloIdL_CaloIsoVL_EleObj;   
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
         if(!(info->triggerBits & trigger)) continue;      
       
         // good vertex requirement
@@ -345,6 +383,7 @@ void selectWe(const TString conf,        // input file
 	    if(abs(gen->id_2)==EGenType::kElectron) { genLepPt = gen->vpt_2; genLepPhi = gen->vphi_2; }
 	  }
 	  scale1fb = weight;
+<<<<<<< HEAD
 	  if (isam == 0)
 	    scale1fb = weight;
 	  else {
@@ -358,6 +397,10 @@ void selectWe(const TString conf,        // input file
 	  metPhi   = info->pfMETphi;
 	  mvaMet   = info->mvaMET;
 	  mvaMetPhi= info->mvaMETphi;
+=======
+	  met	   = info->pfMET;
+	  metPhi   = info->pfMETphi;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	  sumEt    = info->pfSumET;
 	  mt       = sqrt( 2.0 * (vLep.Pt()) * (info->pfMET) * (1.0-cos(toolbox::deltaPhi(vLep.Phi(),info->pfMETphi))) );
 	  q        = goodEle->q;	  

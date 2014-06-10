@@ -15,7 +15,10 @@
 #include <TBenchmark.h>             // class to track macro running statistics
 #include <TVector2.h>               // 2D vector class
 #include <TMath.h>                  // ROOT math library
+<<<<<<< HEAD
 #include <TH1.h>
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include <vector>                   // STL vector class
 #include <iostream>                 // standard I/O
 #include <iomanip>                  // functions to format standard I/O
@@ -23,8 +26,13 @@
 #include "Math/LorentzVector.h"     // 4-vector class
 
 #include "ConfParse.hh"             // input conf file parser
+<<<<<<< HEAD
 #include "../Utils/CSample.hh"  // helper class to handle samples
 #include "../Utils/MyTools.hh"  // various helper functions
+=======
+#include "../Utils/CSample.hh"      // helper class to handle samples
+#include "../Utils/MyTools.hh"      // various helper functions
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 // define structures to read in ntuple
 #include "../Ntupler/interface/EWKAnaDefs.hh"
@@ -35,7 +43,11 @@
 #include "../Ntupler/interface/TVertex.hh"
 
 // lumi section selection with JSON files
+<<<<<<< HEAD
 #include "../../MitAna/DataCont/interface/RunLumiRangeMap.h"
+=======
+#include "MitAna/DataCont/interface/RunLumiRangeMap.h"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 // helper functions for lepton ID selection
 #include "../Utils/LeptonIDCuts.hh"
@@ -67,9 +79,13 @@ void selectZee(const TString conf,        // input file
   
   const Double_t escaleNbins  = 6;
   const Double_t escaleEta[]  = { 0.4,     0.8,     1.2,     1.4442,  2,        2.5 };
+<<<<<<< HEAD
   const Double_t escaleCorr[] = { 1.00053, 1.00156, 1.00319, 1.00586, 1.00294, 1.00577};
 
   TString puCorrDir = "/scratch/klawhorn/EWKAnaR12a/SelPileupCorr/weights/";
+=======
+  const Double_t escaleCorr[] = { 1.00284, 1.00479, 1.00734, 1.00851, 1.00001,  0.982898 };
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 
   //--------------------------------------------------------------------------------------------------------------
@@ -101,7 +117,11 @@ void selectZee(const TString conf,        // input file
   UInt_t  npv, npu;
   Float_t genVPt, genVPhi, genVy, genVMass;
   Float_t scale1fb;
+<<<<<<< HEAD
   Float_t met, metPhi, mvaMet, mvaMetPhi, sumEt, u1, u2;
+=======
+  Float_t met, metPhi, sumEt, u1, u2;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   Int_t   q1, q2;
   LorentzVector *dilep=0, *lep1=0, *lep2=0;
   ///// electron specific /////
@@ -160,8 +180,11 @@ void selectZee(const TString conf,        // input file
     outTree->Branch("scale1fb", &scale1fb, "scale1fb/F");   // event weight per 1/fb (MC)
     outTree->Branch("met",      &met,      "met/F");        // MET
     outTree->Branch("metPhi",   &metPhi,   "metPhi/F");     // phi(MET)
+<<<<<<< HEAD
     outTree->Branch("mvaMet",   &mvaMet,   "mvaMet/F");     // MET
     outTree->Branch("mvaMetPhi",&mvaMetPhi,"mvaMetPhi/F");  // phi(MET)
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     outTree->Branch("sumEt",    &sumEt,    "sumEt/F");      // Sum ET
     outTree->Branch("u1",       &u1,       "u1/F");         // parallel component of recoil
     outTree->Branch("u2",       &u2,       "u2/F");         // perpendicular component of recoil
@@ -248,6 +271,7 @@ void selectZee(const TString conf,        // input file
       const Double_t xsec = samp->xsecv[ifile];
       if(xsec>0) weight = 1000.*xsec/(Double_t)eventTree->GetEntries();     
 
+<<<<<<< HEAD
       // more pu corr stuff      
           TH1F* puCorr;
 
@@ -265,6 +289,11 @@ void selectZee(const TString conf,        // input file
       // loop over events
       //
       //cout << eventTree->GetEntries() << endl;
+=======
+      //
+      // loop over events
+      //
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       Double_t nsel=0, nselvar=0;
       for(UInt_t ientry=0; ientry<eventTree->GetEntries(); ientry++) {
         infoBr->GetEntry(ientry);
@@ -276,8 +305,13 @@ void selectZee(const TString conf,        // input file
         if(hasJSON && !rlrm.HasRunLumi(rl)) continue;  
 
         // trigger requirement               
+<<<<<<< HEAD
         ULong64_t trigger = kHLT_Ele27_WP80;
 	ULong64_t trigObj = kHLT_Ele27_WP80Obj;
+=======
+        ULong64_t trigger = kHLT_Ele22_CaloIdL_CaloIsoVL;
+	ULong64_t trigObj = kHLT_Ele22_CaloIdL_CaloIsoVL_EleObj;  
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
         if(!(info->triggerBits & trigger)) continue;      
       
         // good vertex requirement
@@ -388,7 +422,11 @@ void selectZee(const TString conf,        // input file
 	    
 	    
 	    /******** We have a Z candidate! HURRAY! ********/
+<<<<<<< HEAD
 
+=======
+	    
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	    nsel+=weight;
             nselvar+=weight*weight;
 	    
@@ -417,6 +455,7 @@ void selectZee(const TString conf,        // input file
 	    genVy    = (hasGen) ? gen->vy    : 0;
 	    genVMass = (hasGen) ? gen->vmass : 0;
 	    scale1fb = weight;
+<<<<<<< HEAD
 	    if (isam == 0)
 	      scale1fb = weight;
 	    else {
@@ -431,6 +470,10 @@ void selectZee(const TString conf,        // input file
 	    mvaMet   = info->mvaMET;
 	    mvaMetPhi= info->mvaMETphi;
 
+=======
+	    met      = info->pfMET;
+	    metPhi   = info->pfMETphi;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	    sumEt    = info->pfSumET;
 	    
 	    lep1 = &vTag;

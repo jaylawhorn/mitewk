@@ -3,8 +3,11 @@
 # Execute one job (works interactively and when executed in condor)
 #---------------------------------------------------------------------------------------------------
 h=`basename $0`
+<<<<<<< HEAD
 HADOOP_BASE="/cms/store/user/paus"
 BASE="/mnt/hadoop$HADOOP_BASE"
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 # start waiting time now
 startTime=$(date +%s)
 
@@ -32,6 +35,7 @@ do
 done
 
 # Enter the download requests into the database
+<<<<<<< HEAD
 stage=0
 for file in `echo $files`
 do
@@ -44,11 +48,20 @@ do
     echo " INFO: file already staged $BASE/$book/$dataset/$file (short sleep follows)."
     sleep 1
   fi
+=======
+for file in `echo $files`
+do
+  ~cmsprod/SmartCache/addDownloadRequest.py --file=$file --dataset=$dataset --book=$book
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 done
 
 # Now check every now and then whether they have completed
 done=0
+<<<<<<< HEAD
 while [ "$done" == "0" ] && [ "$stage" == "1" ]
+=======
+while [ "$done" == "0" ]
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 do
   nowTime=$(date +%s)
   duration=$(($nowTime - $startTime))
@@ -66,6 +79,7 @@ do
   done
 done
 
+<<<<<<< HEAD
 # make sure files are really available
 for file in `echo $files`
 do
@@ -80,4 +94,6 @@ do
   fi
 done
 
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 exit 0

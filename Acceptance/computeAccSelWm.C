@@ -23,6 +23,7 @@
 #include <sstream>                  // class for parsing strings
 
 // define structures to read in ntuple
+<<<<<<< HEAD
 #include "EWKAna/Ntupler/interface/EWKAnaDefs.hh"
 #include "EWKAna/Ntupler/interface/TEventInfo.hh"
 #include "EWKAna/Ntupler/interface/TGenInfo.hh"
@@ -30,6 +31,15 @@
 
 // helper functions for lepton ID selection
 #include "EWKAna/Utils/LeptonIDCuts.hh"
+=======
+#include "../Ntupler/interface/EWKAnaDefs.hh"
+#include "../Ntupler/interface/TEventInfo.hh"
+#include "../Ntupler/interface/TGenInfo.hh"
+#include "../Ntupler/interface/TMuon.hh"
+
+// helper functions for lepton ID selection
+#include "../Utils/LeptonIDCuts.hh"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 // helper class to handle efficiency tables
 #include "CEffUser2D.hh"
@@ -48,12 +58,17 @@ void computeAccSelWm(const TString conf,       // input file
   // Settings 
   //============================================================================================================== 
 
+<<<<<<< HEAD
   const Double_t PT_CUT     = 30;
+=======
+  const Double_t PT_CUT     = 25;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT    = 2.1;
   const Double_t ETA_BARREL = 1.2;
   const Double_t ETA_ENDCAP = 1.2;
   
   // efficiency files
+<<<<<<< HEAD
   TString dataHLTEffName("/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_MuHLTEff/analysis/eff.root");
   TString zmmHLTEffName("/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zmm_MuHLTEff/analysis/eff.root");
   TString dataSelEffName("/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_MuSelEff/analysis/eff.root");
@@ -81,6 +96,35 @@ void computeAccSelWm(const TString conf,       // input file
     zmmTrkEffName  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zmm_MuTrkEff_neg/analysis/eff.root";
     dataStaEffName = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/R12a_MuStaEff_iso_neg/analysis/eff.root";
     zmmStaEffName  = "/scratch/klawhorn/EWKAnaR12a/EfficiencyResults/Zmm_MuStaEff_iso_neg/analysis/eff.root";
+=======
+  TString dataHLTEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuHLTEff/analysis/eff.root");
+  TString zmmHLTEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuHLTEff/analysis/eff.root");
+  TString dataSelEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuSelEff/analysis/eff.root");
+  TString zmmSelEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuSelEff/analysis/eff.root");
+  TString dataTrkEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuTrkEff/analysis/eff.root");
+  TString zmmTrkEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuTrkEff/analysis/eff.root");
+  TString dataStaEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuStaEff_iso/analysis/eff.root");
+  TString zmmStaEffName("/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuStaEff_iso/analysis/eff.root");
+  if(charge==1) {
+    dataHLTEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuHLTEff_pos/analysis/eff.root";
+    zmmHLTEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuHLTEff_pos/analysis/eff.root";
+    dataSelEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuSelEff_pos/analysis/eff.root";
+    zmmSelEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuSelEff_pos/analysis/eff.root";
+    dataTrkEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuTrkEff_pos/analysis/eff.root";
+    zmmTrkEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuTrkEff_pos/analysis/eff.root";
+    dataStaEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuStaEff_iso_pos/analysis/eff.root";
+    zmmStaEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuStaEff_iso_pos/analysis/eff.root";
+  }
+  if(charge==-1) {
+    dataHLTEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuHLTEff_neg/analysis/eff.root";
+    zmmHLTEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuHLTEff_neg/analysis/eff.root";
+    dataSelEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuSelEff_neg/analysis/eff.root";
+    zmmSelEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuSelEff_neg/analysis/eff.root";
+    dataTrkEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuTrkEff_neg/analysis/eff.root";
+    zmmTrkEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuTrkEff_neg/analysis/eff.root";
+    dataStaEffName = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/May23_MuStaEff_iso_neg/analysis/eff.root";
+    zmmStaEffName  = "/scratch/klawhorn/EWKAnaStore/8TeV/EfficiencyResults/Zmm_MuStaEff_iso_neg/analysis/eff.root";
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   }
 
   //--------------------------------------------------------------------------------------------------------------
@@ -305,8 +349,13 @@ void computeAccSelWm(const TString conf,       // input file
       nEvtsv[ifile]+=weight;
       
       // trigger requirement               
+<<<<<<< HEAD
       ULong_t trigger = kHLT_IsoMu24_eta2p1;
       ULong_t trigObj = kHLT_IsoMu24_eta2p1Obj;   
+=======
+      ULong_t trigger = kHLT_Mu15_eta2p1;
+      ULong_t trigObj = kHLT_Mu15_eta2p1_MuObj;   
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       if(!(info->triggerBits & trigger)) continue;  
       
       // good vertex requirement

@@ -96,10 +96,17 @@ void fitZee(const TString  outputDir,   // output directory
   vector<TString> fnamev;
   vector<Int_t>   typev;
   
+<<<<<<< HEAD
   fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/data_select.root"); typev.push_back(eData);
   fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/zee_select.root");  typev.push_back(eZee);
   fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/ewk_select.root");  typev.push_back(eEWK);
   fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/top_select.root");  typev.push_back(eEWK);
+=======
+  fnamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zee/ntuples/data_select.root"); typev.push_back(eData);
+  fnamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zee/ntuples/zee_select.root");  typev.push_back(eZee);
+  fnamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zee/ntuples/ewk_select.root");  typev.push_back(eEWK);
+  fnamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zee/ntuples/top_select.root");  typev.push_back(eEWK);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   //
   // Fit options
@@ -121,7 +128,11 @@ void fitZee(const TString  outputDir,   // output directory
   const TString format("png");
   
   // pile-up re-weight file
+<<<<<<< HEAD
   const TString pufname("/data/blue/ksung/EWKAna/test/Utils/PileupReweighting.Summer11DYmm_To_Run2011A.root");
+=======
+  const TString pufname("/scratch/ksung/EWKAna/test/Utils/PileupReweighting.Summer11DYmm_To_Run2011A.root");
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
  
    
   //--------------------------------------------------------------------------------------------------------------

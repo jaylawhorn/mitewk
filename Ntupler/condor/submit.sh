@@ -18,10 +18,13 @@ echo "  --> $*"
    outputDir=$7
 runTypeIndex=$8
      noStage=$9
+<<<<<<< HEAD
       isData=${10}
       useGen=${11}
      fsrmode=${12}
  skipHLTFail=${13}
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 jobId=`date +%j%m%d%k%M%S`
 dataDir=`tail -1  $catalogDir/$book/$dataset/Filesets | cut -d' ' -f2`
@@ -34,11 +37,17 @@ workDir=/home/$USER/cms/condor
 RUNDIR=/home/klawhorn/cms/cmssw/031/CMSSW_5_3_10_patch1/src/EWKAna/Ntupler
 mkdir -p $workDir
 cd $workDir
+<<<<<<< HEAD
 cp $RUNDIR/macros/rootlogon.C     $workDir
 cp $RUNDIR/condor/run.sh          $workDir
 cp $RUNDIR/macros/$runMacro       $workDir
 cp $RUNDIR/condor/cacheFileset.sh $workDir
 cp $RUNDIR/macros/Subdet*.xml     $workDir
+=======
+cp $RUNDIR/macros/rootlogon.C $workDir
+cp $RUNDIR/condor/run.sh      $workDir
+cp $RUNDIR/macros/$runMacro   $workDir
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 script=$workDir/run.sh
 
 # Create the directory for the results
@@ -81,7 +90,11 @@ for fileset in `cat $filesets | cut -d' ' -f1 `
 do
   # check if the output already exists and whether it is complete
   rFile="$outputDir/$outputName/$book/$dataset"
+<<<<<<< HEAD
   rFile=`echo $rFile/${outputName}_${fileset}*.root | cut -d' ' -f1 2> /dev/null`
+=======
+  rFile=`echo $rFile/${outputName}_${dataset}_${skim}_${fileset}*.root | cut -d' ' -f1 2> /dev/null`
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   process=false
   if [ -f "$rFile" ]
@@ -115,14 +128,22 @@ do
     logFile=/tmp/$USER/$logFile
     mkdir -p /tmp/$USER
     rm    -f $logFile
+<<<<<<< HEAD
     echo "   $script $runMacro $catalogDir $book $dataset $skim $fileset $outputName $outputDir $runTypeIndex $isData $useGen $fsrmode $skipHLTFail"
+=======
+    echo "   $script $runMacro $catalogDir $book $dataset $skim $fileset $outputName $outputDir $runTypeIndex "
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
 cat > submit.cmd <<EOF
 Universe                = vanilla
 Requirements            = ((Arch == "X86_64") && (Machine != "t3btch112.mit.edu") && (Disk >= DiskUsage) && ((Memory * 1024) >= ImageSize) && (HasFileTransfer))
 Notification            = Error
 Executable              = $script
+<<<<<<< HEAD
 Arguments               = $runMacro $catalogDir $book $dataset $skim $fileset $outputName $outputDir $runTypeIndex $isData $useGen $fsrmode $skipHLTFail
+=======
+Arguments               = $runMacro $catalogDir $book $dataset $skim $fileset $outputName $outputDir $runTypeIndex
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 Rank                    = Mips
 GetEnv                  = True
 Initialdir              = $workDir

@@ -67,8 +67,11 @@ void makeHTML(const TString outDir);
 
 void fitWm(const TString  outputDir,   // output directory
            const Double_t lumi,        // integrated luminosity (/fb)
+<<<<<<< HEAD
            const Bool_t recoil,        // 1 = do recoil corrections, 0 = no recoil corrections
            const Bool_t mvaMet,        // 1 = fit with mva met, 0 = fit with pf met
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	   const Double_t nsigma=0     // vary MET corrections by n-sigmas (nsigma=0 means nominal correction)
 ) {
   gBenchmark->Start("fitWm");
@@ -80,12 +83,18 @@ void fitWm(const TString  outputDir,   // output directory
   // MET histogram binning and range
   const Int_t    NBINS   = 50;
   const Double_t METMAX  = 100;
+<<<<<<< HEAD
   const Double_t PT_CUT  = 30;
+=======
+  
+  const Double_t PT_CUT  = 25;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT = 2.1;
 
   // file format for output plots
   const TString format("png"); 
 
+<<<<<<< HEAD
   // recoil correction
 
   RecoilCorrector recoilCorr("../Recoil/ZmmPfData/fits.root");//, (!) uncomment to perform corrections to recoil from W-MC/Z-MC
@@ -94,6 +103,14 @@ void fitWm(const TString  outputDir,   // output directory
   //"../Recoil/WmmMC/fits.root",
   //"../Recoil/ZmmMC/fits.root");
   
+=======
+    
+  // recoil correction
+  RecoilCorrector recoilCorr("../Recoil/ZmmData/fits.root");//, (!) uncomment to perform corrections to recoil from W-MC/Z-MC
+                             //"../Recoil/WmpMC/fits.root",
+			     //"../Recoil/WmmMC/fits.root",
+			     //"../Recoil/ZmmMC/fits.root");
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
    
   // NNLO boson pT k-factors
   TFile nnloCorrFile("/scratch/ksung/EWKAna/8TeV/Utils/Ratio.root");
@@ -105,6 +122,7 @@ void fitWm(const TString  outputDir,   // output directory
   enum { eData, eWmunu, eEWK, eAntiData, eAntiWmunu, eAntiEWK };  // data type enum
   vector<TString> fnamev;
   vector<Int_t>   typev;
+<<<<<<< HEAD
 
   // Data 
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Wmunu/ntuples/data_select.root"); typev.push_back(eData);
@@ -122,6 +140,18 @@ void fitWm(const TString  outputDir,   // output directory
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/AntiWmunu/ntuples/ewk_select.root");  typev.push_back(eAntiEWK);
   // Anti-isolated top quark backgrounds MC
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/AntiWmunu/ntuples/top_select.root");  typev.push_back(eAntiEWK);
+=======
+  
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/Wmunu/ntuples/data_select.root"); typev.push_back(eData);
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/Wmunu/ntuples/wm_select.root");   typev.push_back(eWmunu);
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/Wmunu/ntuples/ewk_select.root");  typev.push_back(eEWK);
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/Wmunu/ntuples/top_select.root");  typev.push_back(eEWK);
+  
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/AntiWmunu/ntuples/data_select.root"); typev.push_back(eAntiData);
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/AntiWmunu/ntuples/wm_select.root");   typev.push_back(eAntiWmunu);
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/AntiWmunu/ntuples/ewk_select.root");  typev.push_back(eAntiEWK);
+  fnamev.push_back("/scratch/klawhorn/EWKAnaStore/8TeV/Selection/AntiWmunu/ntuples/top_select.root");  typev.push_back(eAntiEWK);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
 
   //--------------------------------------------------------------------------------------------------------------
@@ -180,6 +210,7 @@ void fitWm(const TString  outputDir,   // output directory
     infile = new TFile(fnamev[ifile]);	  assert(infile);
     intree = (TTree*)infile->Get("Events"); assert(intree);
 
+<<<<<<< HEAD
     if (mvaMet==kFALSE) {
       intree->SetBranchAddress("met",      &met);       // MET
       intree->SetBranchAddress("metPhi",   &metPhi);    // phi(MET)
@@ -188,6 +219,8 @@ void fitWm(const TString  outputDir,   // output directory
       intree->SetBranchAddress("mvaMet",      &met);       // MET
       intree->SetBranchAddress("mvaMetPhi",   &metPhi);    // phi(MET)
     }
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     intree->SetBranchAddress("runNum",   &runNum);    // event run number
     intree->SetBranchAddress("lumiSec",  &lumiSec);   // event lumi section
     intree->SetBranchAddress("evtNum",   &evtNum);    // event number
@@ -196,15 +229,26 @@ void fitWm(const TString  outputDir,   // output directory
     intree->SetBranchAddress("genVPt",   &genVPt);    // GEN W boson pT (signal MC)
     intree->SetBranchAddress("genVPhi",  &genVPhi);   // GEN W boson phi (signal MC)   
     intree->SetBranchAddress("scale1fb", &scale1fb);  // event weight per 1/fb (MC)
+<<<<<<< HEAD
+=======
+    intree->SetBranchAddress("met",      &met);       // MET
+    intree->SetBranchAddress("metPhi",   &metPhi);    // phi(MET)
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     intree->SetBranchAddress("sumEt",    &sumEt);     // Sum ET
     intree->SetBranchAddress("mt",       &mt);        // transverse mass
     intree->SetBranchAddress("u1",       &u1);        // parallel component of recoil
     intree->SetBranchAddress("u2",       &u2);        // perpendicular component of recoil
     intree->SetBranchAddress("q",        &q);	      // lepton charge
     intree->SetBranchAddress("lep",      &lep);       // lepton 4-vector
+<<<<<<< HEAD
     intree->SetBranchAddress("pfChIso",  &pfChIso);   // nearby charged hadrons
     intree->SetBranchAddress("pfGamIso", &pfGamIso);  // nearby photons
     intree->SetBranchAddress("pfNeuIso", &pfNeuIso);  // nearby neutral hadrons
+=======
+    intree->SetBranchAddress("pfChIso",  &pfChIso);
+    intree->SetBranchAddress("pfGamIso", &pfGamIso);
+    intree->SetBranchAddress("pfNeuIso", &pfNeuIso);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
     //
     // loop over events
@@ -218,6 +262,7 @@ void fitWm(const TString  outputDir,   // output directory
       if( (typev[ifile]==eAntiData || typev[ifile]==eAntiWmunu || typev[ifile]==eAntiEWK) &&
           (pfChIso+pfGamIso+pfNeuIso)>0.5*(lep->Pt()) ) 
 	  continue;
+<<<<<<< HEAD
 
       if(typev[ifile]==eData) {
 	hDataMet->Fill(met);
@@ -293,6 +338,73 @@ void fitWm(const TString  outputDir,   // output directory
 	  if(q>0) { hAntiEWKMetp->Fill(met,weight); }
 	  else    { hAntiEWKMetm->Fill(met,weight); }
 	}
+=======
+      
+      if(typev[ifile]==eData) {
+        hDataMet->Fill(met);
+	if(q>0) { hDataMetp->Fill(met); } 
+	else    { hDataMetm->Fill(met); }
+      
+      } else if(typev[ifile]==eAntiData) {
+        hAntiDataMet->Fill(met);
+	if(q>0) { hAntiDataMetp->Fill(met); } 
+	else    { hAntiDataMetm->Fill(met); }      
+      
+      } else {
+        Double_t weight = 1;
+        weight *= scale1fb*lumi;
+	
+	if(typev[ifile]==eWmunu) {
+          Double_t corrMet=met, corrMetPhi=metPhi;
+        
+	  // apply recoil corrections to W MC
+	  Double_t lepPt = lep->Pt();
+	  //Double_t lepPt = gRandom->Gaus(lep->Pt(),0.5);  // (!) uncomment to apply scale/res corrections to MC
+	  recoilCorr.Correct(corrMet,corrMetPhi,genVPt,genVPhi,lepPt,lep->Phi(),nsigma,q);
+	
+          Double_t nnlocorr=1;
+          for(Int_t ibin=1; ibin<=hNNLOCorr->GetNbinsX(); ibin++) {
+            if(genVPt >= hNNLOCorr->GetBinLowEdge(ibin) &&
+               genVPt < (hNNLOCorr->GetBinLowEdge(ibin)+hNNLOCorr->GetBinWidth(ibin)))
+              nnlocorr = hNNLOCorr->GetBinContent(ibin);
+          }
+	  //weight *= nnlocorr;  // (!) uncomment to apply NNLO corrections
+	  
+          hWmunuMet->Fill(corrMet,weight);
+	  if(q>0) { hWmunuMetp->Fill(corrMet,weight); } 
+	  else    { hWmunuMetm->Fill(corrMet,weight); }
+        }
+	if(typev[ifile]==eAntiWmunu) {
+          Double_t corrMet=met, corrMetPhi=metPhi;
+        
+	  // apply recoil corrections to W MC
+	  Double_t lepPt = lep->Pt();//gRandom->Gaus(lep->Pt(),0.5);
+	  //Double_t lepPt = gRandom->Gaus(lep->Pt(),0.5);  // (!) uncomment to apply scale/res corrections to MC
+	  recoilCorr.Correct(corrMet,corrMetPhi,genVPt,genVPhi,lepPt,lep->Phi(),nsigma,q);
+          
+	  Double_t nnlocorr=1;
+          for(Int_t ibin=1; ibin<=hNNLOCorr->GetNbinsX(); ibin++) {
+            if(genVPt >= hNNLOCorr->GetBinLowEdge(ibin) &&
+               genVPt < (hNNLOCorr->GetBinLowEdge(ibin)+hNNLOCorr->GetBinWidth(ibin)))
+              nnlocorr = hNNLOCorr->GetBinContent(ibin);
+          }
+	  //weight *= nnlocorr;  // (!) uncomment to apply NNLO corrections
+          
+	  hAntiWmunuMet->Fill(corrMet,weight);
+	  if(q>0) { hAntiWmunuMetp->Fill(corrMet,weight); } 
+	  else    { hAntiWmunuMetm->Fill(corrMet,weight); }
+        }
+        if(typev[ifile]==eEWK) {
+          hEWKMet->Fill(met,weight);
+	  if(q>0) { hEWKMetp->Fill(met,weight); }
+	  else    { hEWKMetm->Fill(met,weight); }
+        }
+        if(typev[ifile]==eAntiEWK) {
+          hAntiEWKMet->Fill(met,weight);
+	  if(q>0) { hAntiEWKMetp->Fill(met,weight); }
+	  else    { hAntiEWKMetm->Fill(met,weight); }
+        }
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       }
     }
   }  
@@ -303,8 +415,13 @@ void fitWm(const TString  outputDir,   // output directory
   // Declare fit parameters for signal and background yields
   // Note: W signal and EWK+top PDFs are constrained to the ratio described in MC
   //
+<<<<<<< HEAD
   RooRealVar nSig("nSig","nSig",0.5*(hDataMet->Integral()),0,hDataMet->Integral());
   RooRealVar nQCD("nQCD","nQCD",0.5*(hDataMet->Integral()),0,hDataMet->Integral());
+=======
+  RooRealVar nSig("nSig","nSig",0.7*(hDataMet->Integral()),0,hDataMet->Integral());
+  RooRealVar nQCD("nQCD","nQCD",0.3*(hDataMet->Integral()),0,hDataMet->Integral());
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   RooRealVar cewk("cewk","cewk",0.1,0,5) ;
   cewk.setVal(hEWKMet->Integral()/hWmunuMet->Integral());
   cewk.setConstant(kTRUE);
@@ -415,7 +532,11 @@ void fitWm(const TString  outputDir,   // output directory
   RooDataHist dataTotal("dataTotal","dataTotal", RooArgList(pfmet), Index(rooCat),
                         Import("Select", dataMet),
                         Import("Anti",   antiMet));
+<<<<<<< HEAD
   RooFitResult *fitRes = pdfTotal.fitTo(dataTotal,Extended(),Minos(kFALSE),Save(kTRUE));
+=======
+  RooFitResult *fitRes = pdfTotal.fitTo(dataTotal,Extended(),Minos(kTRUE),Save(kTRUE));
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   RooDataHist dataMetp("dataMetp", "dataMetp", RooArgSet(pfmet), hDataMetp);
   RooDataHist antiMetp("antiMetp", "antiMetp", RooArgSet(pfmet), hAntiDataMetp);
@@ -429,7 +550,11 @@ void fitWm(const TString  outputDir,   // output directory
   RooDataHist dataTotalm("dataTotalm","dataTotalm", RooArgList(pfmet), Index(rooCat),
                          Import("Select", dataMetm),
                          Import("Anti",   antiMetm));
+<<<<<<< HEAD
   RooFitResult *fitResm = pdfTotalm.fitTo(dataTotalm,Extended(),Minos(kFALSE),Save(kTRUE));
+=======
+  RooFitResult *fitResm = pdfTotalm.fitTo(dataTotalm,Extended(),Minos(kTRUE),Save(kTRUE));
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     
   //
   // Use histogram version of fitted PDFs to make ratio plots
@@ -563,6 +688,7 @@ void fitWm(const TString  outputDir,   // output directory
 
   CPlot plotMetDiff("fitmet","","#slash{E}_{T} [GeV]","#chi");
   plotMetDiff.AddHist1D(hMetDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotMetDiff.SetYRange(-20,20);
   plotMetDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   plotMetDiff.AddLine(0, 10,METMAX, 10,kBlack,3);
@@ -571,6 +697,12 @@ void fitWm(const TString  outputDir,   // output directory
   //plotMetDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   //plotMetDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
   //plotMetDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+=======
+  plotMetDiff.SetYRange(-8,8);
+  plotMetDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
+  plotMetDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
+  plotMetDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotMetDiff.Draw(c,kTRUE,format,2);
   
   plotMet.SetName("fitmetlog");
@@ -603,10 +735,17 @@ void fitWm(const TString  outputDir,   // output directory
 
   CPlot plotAntiMetDiff("fitantimet","","#slash{E}_{T} [GeV]","#chi");
   plotAntiMetDiff.AddHist1D(hMetDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotAntiMetDiff.SetYRange(-20,20);
   plotAntiMetDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   plotAntiMetDiff.AddLine(0, 10,METMAX, 10,kBlack,3);
   plotAntiMetDiff.AddLine(0,-10,METMAX,-10,kBlack,3);
+=======
+  plotAntiMetDiff.SetYRange(-8,8);
+  plotAntiMetDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
+  plotAntiMetDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
+  plotAntiMetDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotAntiMetDiff.Draw(c,kTRUE,format,2);
   
   plotAntiMet.SetName("fitantimetlog");
@@ -638,16 +777,28 @@ void fitWm(const TString  outputDir,   // output directory
   plotMetp.GetLegend()->AddEntry(hDummyQCD,"QCD","F");
   plotMetp.AddTextBox(lumitext,0.55,0.80,0.90,0.86,0);
   plotMetp.AddTextBox("CMS Preliminary",0.63,0.92,0.95,0.99,0);
+<<<<<<< HEAD
   plotMetp.SetYRange(0.1,1.1*(hDataMetp->GetMaximum()));
   //plotMetp.SetYRange(0.1,4100);
+=======
+//  plotMetp.SetYRange(0.1,1.1*(hDataMetp->GetMaximum()));
+plotMetp.SetYRange(0.1,4100);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotMetp.Draw(c,kFALSE,format,1);
 
   CPlot plotMetpDiff("fitmetp","","#slash{E}_{T} [GeV]","#chi");
   plotMetpDiff.AddHist1D(hMetpDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotMetpDiff.SetYRange(-20,20);
   plotMetpDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   plotMetpDiff.AddLine(0, 10,METMAX, 10,kBlack,3);
   plotMetpDiff.AddLine(0,-10,METMAX,-10,kBlack,3);
+=======
+  plotMetpDiff.SetYRange(-8,8);
+  plotMetpDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
+  plotMetpDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
+  plotMetpDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotMetpDiff.Draw(c,kTRUE,format,2);
   
   plotMetp.SetName("fitmetplog");
@@ -675,16 +826,28 @@ void fitWm(const TString  outputDir,   // output directory
   plotAntiMetp.GetLegend()->AddEntry(hDummyQCD,"QCD","F");
   plotAntiMetp.AddTextBox(lumitext,0.55,0.80,0.90,0.86,0);
   plotAntiMetp.AddTextBox("CMS Preliminary",0.63,0.92,0.95,0.99,0);
+<<<<<<< HEAD
   plotAntiMetp.SetYRange(0.1,1.1*(hAntiDataMetp->GetMaximum()));
 //plotAntiMetp.SetYRange(0.1,1500);
+=======
+//  plotAntiMetp.SetYRange(0.1,1.1*(hAntiDataMetp->GetMaximum()));
+plotAntiMetp.SetYRange(0.1,1500);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotAntiMetp.Draw(c,kFALSE,format,1);
 
   CPlot plotAntiMetpDiff("fitantimetp","","#slash{E}_{T} [GeV]","#chi");
   plotAntiMetpDiff.AddHist1D(hAntiMetpDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotAntiMetpDiff.SetYRange(-20,20);
   plotAntiMetpDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   plotAntiMetpDiff.AddLine(0, 10,METMAX, 10,kBlack,3);
   plotAntiMetpDiff.AddLine(0,-10,METMAX,-10,kBlack,3);
+=======
+  plotAntiMetpDiff.SetYRange(-8,8);
+  plotAntiMetpDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
+  plotAntiMetpDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
+  plotAntiMetpDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotAntiMetpDiff.Draw(c,kTRUE,format,2);
   
   plotAntiMetp.SetName("fitantimetplog");
@@ -716,16 +879,28 @@ void fitWm(const TString  outputDir,   // output directory
   plotMetm.GetLegend()->AddEntry(hDummyQCD,"QCD","F");
   plotMetm.AddTextBox(lumitext,0.55,0.80,0.90,0.86,0);
   plotMetm.AddTextBox("CMS Preliminary",0.63,0.92,0.95,0.99,0);
+<<<<<<< HEAD
   plotMetm.SetYRange(0.1,1.1*(hDataMetm->GetMaximum()));
   //plotMetm.SetYRange(0.1,4100);
+=======
+//  plotMetm.SetYRange(0.1,1.1*(hDataMetm->GetMaximum()));
+plotMetm.SetYRange(0.1,4100);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotMetm.Draw(c,kFALSE,format,1);
 
   CPlot plotMetmDiff("fitmetm","","#slash{E}_{T} [GeV]","#chi");
   plotMetmDiff.AddHist1D(hMetmDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotMetmDiff.SetYRange(-20,20);
   plotMetmDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   plotMetmDiff.AddLine(0, 10,METMAX, 10,kBlack,3);
   plotMetmDiff.AddLine(0,-10,METMAX,-10,kBlack,3);
+=======
+  plotMetmDiff.SetYRange(-8,8);
+  plotMetmDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
+  plotMetmDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
+  plotMetmDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotMetmDiff.Draw(c,kTRUE,format,2);
   
   plotMetm.SetName("fitmetmlog");
@@ -753,16 +928,28 @@ void fitWm(const TString  outputDir,   // output directory
   plotAntiMetm.GetLegend()->AddEntry(hDummyQCD,"QCD","F");
   plotAntiMetm.AddTextBox(lumitext,0.55,0.80,0.90,0.86,0);
   plotAntiMetm.AddTextBox("CMS Preliminary",0.63,0.92,0.95,0.99,0);
+<<<<<<< HEAD
   plotAntiMetm.SetYRange(0.1,1.1*(hAntiDataMetm->GetMaximum()));
   //plotAntiMetm.SetYRange(0.1,1500);
+=======
+//  plotAntiMetm.SetYRange(0.1,1.1*(hAntiDataMetm->GetMaximum()));
+plotAntiMetm.SetYRange(0.1,1500);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotAntiMetm.Draw(c,kFALSE,format,1);
 
   CPlot plotAntiMetmDiff("fitantimetm","","#slash{E}_{T} [GeV]","#chi");
   plotAntiMetmDiff.AddHist1D(hAntiMetmDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotAntiMetmDiff.SetYRange(-20,20);
   plotAntiMetmDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
   plotAntiMetmDiff.AddLine(0, 10,METMAX, 10,kBlack,3);
   plotAntiMetmDiff.AddLine(0,-10,METMAX,-10,kBlack,3);
+=======
+  plotAntiMetmDiff.SetYRange(-8,8);
+  plotAntiMetmDiff.AddLine(0, 0,METMAX, 0,kBlack,1);
+  plotAntiMetmDiff.AddLine(0, 5,METMAX, 5,kBlack,3);
+  plotAntiMetmDiff.AddLine(0,-5,METMAX,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotAntiMetmDiff.Draw(c,kTRUE,format,2);
   
   plotAntiMetm.SetName("fitantimetmlog");
@@ -770,7 +957,11 @@ void fitWm(const TString  outputDir,   // output directory
   plotAntiMetm.SetYRange(1e-3*(hAntiDataMetm->GetMaximum()),10*(hAntiDataMetm->GetMaximum()));
   plotAntiMetm.Draw(c,kTRUE,format,1);
 
+<<<<<<< HEAD
   
+=======
+    
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   //--------------------------------------------------------------------------------------------------------------
   // Output
   //==============================================================================================================

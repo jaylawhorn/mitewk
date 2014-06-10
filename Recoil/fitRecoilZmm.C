@@ -10,7 +10,10 @@
 #include <iostream>                   // standard I/O
 #include <TFile.h>                    // file handle class
 #include <TTree.h>                    // class to access ntuples
+<<<<<<< HEAD
 #include <TVector2.h>
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include <TF1.h>                      // 1D function
 #include <TFitResult.h>               // class to handle fit results
 #include <TGraphErrors.h>             // graph class
@@ -125,11 +128,18 @@ void performFit(const vector<TH1D*> hv, const vector<TH1D*> hbkgv, const Double_
 //=== MAIN MACRO ================================================================================================= 
 
 void fitRecoilZmm(TString infilename,  // input ntuple
+<<<<<<< HEAD
 		  Int_t   pfu1model,   // u1 model (1 => single Gaussian, 2 => double Gaussian, 3 => triple Gaussian)
 		  Int_t   pfu2model,   // u2 model (1 => single Gaussian, 2 => double Gaussian, 3 => triple Gaussian)
 		  Bool_t  sigOnly,     // signal event only?
 		  Bool_t  mvaMet,      // mvaMet=1
 		  TString outputDir    // output directory
+=======
+                  Int_t   pfu1model,   // u1 model (1 => single Gaussian, 2 => double Gaussian, 3 => triple Gaussian)
+                  Int_t   pfu2model,   // u2 model (1 => single Gaussian, 2 => double Gaussian, 3 => triple Gaussian)
+	          Bool_t  sigOnly,     // signal event only?
+	          TString outputDir    // output directory
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 ) {
 
   //--------------------------------------------------------------------------------------------------------------
@@ -154,12 +164,21 @@ void fitRecoilZmm(TString infilename,  // input ntuple
   vector<TString> fnamev;
   vector<Bool_t> isBkgv;
   fnamev.push_back(infilename); isBkgv.push_back(kFALSE);
+<<<<<<< HEAD
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zmumu/ntuples/top_select.root"); isBkgv.push_back(kTRUE); 
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zmumu/ntuples/ewk_select.root"); isBkgv.push_back(kTRUE);
   
   const Double_t MASS_LOW  = 60;
   const Double_t MASS_HIGH = 120;  
   const Double_t PT_CUT    = 30;
+=======
+  fnamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zmumu/ntuples/top_select.root"); isBkgv.push_back(kTRUE); 
+  fnamev.push_back("/scratch/ksung/EWKAna/8TeV/Selection/Zmumu/ntuples/ewk_select.root"); isBkgv.push_back(kTRUE);
+  
+  const Double_t MASS_LOW  = 60;
+  const Double_t MASS_HIGH = 120;  
+  const Double_t PT_CUT    = 25;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT   = 2.1;
      
  
@@ -196,6 +215,7 @@ void fitRecoilZmm(TString infilename,  // input ntuple
   TFitResultPtr fitresPFu2sigma0; TF1 *fcnPFu2sigma0 = new TF1("fcnPFu2sigma0",sigmaFunc,0,7000,3);  
   TFitResultPtr fitresPFu2frac2;  TF1 *fcnPFu2frac2  = new TF1("fcnPFu2frac2",frac2Func,0,7000,12);
       
+<<<<<<< HEAD
   fcnPFu1sigma1->SetParameter(0,-5e-4); fcnPFu1sigma1->SetParLimits(0,-1e-2,1e-2);
   fcnPFu1sigma1->SetParameter(1,0.07);  fcnPFu1sigma1->SetParLimits(1,-1,1);
   fcnPFu1sigma1->SetParameter(2,11);   fcnPFu1sigma1->SetParLimits(2,3,17);
@@ -215,6 +235,27 @@ void fitRecoilZmm(TString infilename,  // input ntuple
   fcnPFu2sigma0->SetParameter(0,-1e-4);  fcnPFu2sigma0->SetParLimits(0,-1e-2,1e-2);
   fcnPFu2sigma0->SetParameter(1,0.03);   fcnPFu2sigma0->SetParLimits(1,-1,1);
   fcnPFu2sigma0->SetParameter(2,7);      fcnPFu2sigma0->SetParLimits(2,5,21);
+=======
+//  fcnPFu1sigma1->SetParameter(0,-5e-4); fcnPFu1sigma1->SetParLimits(0,-1e-3,1e-3);
+//  fcnPFu1sigma1->SetParameter(1,0.07);  fcnPFu1sigma1->SetParLimits(1,-1,1);
+//  fcnPFu1sigma1->SetParameter(2,5.5);   fcnPFu1sigma1->SetParLimits(2,3,7);
+//  fcnPFu1sigma2->SetParameter(0,1e-4);  fcnPFu1sigma2->SetParLimits(0,-2e-2,2e-2);
+//  fcnPFu1sigma2->SetParameter(1,0.06);  fcnPFu1sigma2->SetParLimits(1,-1,1);
+//  fcnPFu1sigma2->SetParameter(2,9.5);   fcnPFu1sigma2->SetParLimits(2,5,15);
+//  fcnPFu1sigma0->SetParameter(0,-1e-4); fcnPFu1sigma0->SetParLimits(0,-1e-2,1e-2);
+//  fcnPFu1sigma0->SetParameter(1,0.07);  fcnPFu1sigma0->SetParLimits(1,-1,1);
+  fcnPFu1sigma0->SetParameter(2,7);     fcnPFu1sigma0->SetParLimits(2,5,9); 
+  
+//  fcnPFu2sigma1->SetParameter(0,-1e-4);  fcnPFu2sigma1->SetParLimits(0,-5e-3,5e-3);
+//  fcnPFu2sigma1->SetParameter(1,0.05);   fcnPFu2sigma1->SetParLimits(1,-1,1);
+//  fcnPFu2sigma1->SetParameter(2,5);      fcnPFu2sigma1->SetParLimits(2,2,7);
+//  fcnPFu2sigma2->SetParameter(0,-1e-4);  fcnPFu2sigma2->SetParLimits(0,-5e-3,5e-3);
+//  fcnPFu2sigma2->SetParameter(1,0.05);   fcnPFu2sigma2->SetParLimits(1,-1,1);
+//  fcnPFu2sigma2->SetParameter(2,9);      fcnPFu2sigma2->SetParLimits(2,5,15);
+//  fcnPFu2sigma0->SetParameter(0,-1e-4);  fcnPFu2sigma0->SetParLimits(0,-1e-2,1e-2);
+//  fcnPFu2sigma0->SetParameter(1,0.03);   fcnPFu2sigma0->SetParLimits(1,-1,1);
+//  fcnPFu2sigma0->SetParameter(2,7);      fcnPFu2sigma0->SetParLimits(2,5,9);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     
   TFile *infile = 0;
   TTree *intree = 0;  
@@ -228,7 +269,11 @@ void fitRecoilZmm(TString infilename,  // input ntuple
   UInt_t  npv, npu;
   Float_t genVPt, genVPhi, genVy, genVMass;
   Float_t scale1fb;
+<<<<<<< HEAD
   Float_t met, metPhi, sumEt, u1, u2, u1_mva, u2_mva;
+=======
+  Float_t met, metPhi, sumEt, u1, u2;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   Int_t   q1, q2;
   LorentzVector *dilep=0, *lep1=0, *lep2=0;
   
@@ -237,6 +282,7 @@ void fitRecoilZmm(TString infilename,  // input ntuple
     cout << "Processing " << fnamev[ifile] << "..." << endl;
     infile = new TFile(fnamev[ifile]);
     intree = (TTree*)infile->Get("Events");
+<<<<<<< HEAD
 
     if ( mvaMet == kFALSE ) {
       intree->SetBranchAddress("met",	 &met);        // MET
@@ -246,6 +292,8 @@ void fitRecoilZmm(TString infilename,  // input ntuple
       intree->SetBranchAddress("mvaMet",	 &met);        // MET
       intree->SetBranchAddress("mvaMetPhi",	 &metPhi);     // phi(MET)
     }
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
     intree->SetBranchAddress("runNum",   &runNum);     // event run number
     intree->SetBranchAddress("lumiSec",	 &lumiSec);    // event lumi section
@@ -259,6 +307,11 @@ void fitRecoilZmm(TString infilename,  // input ntuple
     intree->SetBranchAddress("genVy",    &genVy);      // GEN boson rapidity (signal MC)
     intree->SetBranchAddress("genVMass", &genVMass);   // GEN boson mass (signal MC)
     intree->SetBranchAddress("scale1fb", &scale1fb);   // event weight per 1/fb (MC)
+<<<<<<< HEAD
+=======
+    intree->SetBranchAddress("met",	 &met);        // MET
+    intree->SetBranchAddress("metPhi",	 &metPhi);     // phi(MET)
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     intree->SetBranchAddress("sumEt",	 &sumEt);      // Sum ET
     intree->SetBranchAddress("u1",	 &u1);         // parallel component of recoil
     intree->SetBranchAddress("u2",	 &u2);         // perpendicular component of recoil
@@ -285,6 +338,7 @@ void fitRecoilZmm(TString infilename,  // input ntuple
           ipt = ibin;
       }
       if(ipt<0) continue;
+<<<<<<< HEAD
 
       TVector2 vZPt((dilep->Pt())*cos(dilep->Phi()),(dilep->Pt())*sin(dilep->Phi()));
       TVector2 vMet((met)*cos(metPhi), (met)*sin(metPhi));
@@ -312,6 +366,16 @@ void fitRecoilZmm(TString infilename,  // input ntuple
 	  hPFu1v[ipt]->Fill(u1_mva);
 	  hPFu2v[ipt]->Fill(u2_mva);
 	}
+=======
+    
+      if(isBkgv[ifile]) {
+        hPFu1Bkgv[ipt]->Fill(u1);
+        hPFu2Bkgv[ipt]->Fill(u2);
+      
+      } else {
+        hPFu1v[ipt]->Fill(u1);
+        hPFu2v[ipt]->Fill(u2);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       }
     }
     

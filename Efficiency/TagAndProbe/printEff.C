@@ -14,9 +14,15 @@
 
 //=== MAIN MACRO =================================================================================================
 
+<<<<<<< HEAD
 void printEff(const TString outdir   = "Data_try2/extra",
               const TString mcfname  = "MC/eff.root",
 	      const TString datfname = "Data_try2/eff.root"
+=======
+void printEff(const TString outdir   = "Data/extra",
+              const TString mcfname  = "MC/eff.root",
+	      const TString datfname = "Data/eff.root"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 ) {
   gBenchmark->Start("printEff");
 

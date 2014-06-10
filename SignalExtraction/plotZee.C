@@ -22,7 +22,10 @@
 #include <sstream>                        // class for parsing strings
 #include <TRandom3.h>
 #include <TGaxis.h>
+<<<<<<< HEAD
 #include <TMath.h>
+=======
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 #include "Math/LorentzVector.h"           // 4-vector class
 
 #include "../Utils/MyTools.hh"	          // various helper functions
@@ -40,6 +43,7 @@ TH1D* makeDiffHist(TH1D* hData, TH1D* hFit, const TString name);
 
 Double_t getResCorr(const Double_t eta)
 {
+<<<<<<< HEAD
   /*
   if     (fabs(eta) < 0.4) { return 0.178338; }
   else if(fabs(eta) < 0.8) { return 0.282229; }
@@ -49,6 +53,14 @@ Double_t getResCorr(const Double_t eta)
   else { return 0.755435; }
   */
   return 1.0;
+=======
+  if	 (fabs(eta) < 0.4)    { return 0.464061;   }
+  else if(fabs(eta) < 0.8)    { return 0.00985329; }
+  else if(fabs(eta) < 1.2)    { return 0.822958;   }
+  else if(fabs(eta) < 1.4442) { return 0.71369;    }
+  else if(fabs(eta) < 1.566)  { return 1.35987;    }
+  else  		      { return 1.27686;    }
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 }
 
 //=== MAIN MACRO ================================================================================================= 
@@ -70,10 +82,17 @@ void plotZee(const TString  outputDir,   // output directory
   vector<TString> fnamev;
   vector<Int_t>   typev;
   
+<<<<<<< HEAD
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zee/ntuples/data_select.root"); typev.push_back(eData);
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zee/ntuples/zee_select.root");  typev.push_back(eZee);
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zee/ntuples/ewk_select.root");  typev.push_back(eEWK);
   fnamev.push_back("/scratch/klawhorn/EWKAnaR12a/Selection/Zee/ntuples/top_select.root");  typev.push_back(eEWK);
+=======
+  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/data_select.root"); typev.push_back(eData);
+  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/zee_select.root");  typev.push_back(eZee);
+  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/ewk_select.root");  typev.push_back(eEWK);
+  fnamev.push_back("/data/blue/ksung/EWKAna/8TeV/Selection/Zee/ntuples/top_select.root");  typev.push_back(eEWK);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
   //
   // Fit options
@@ -81,13 +100,23 @@ void plotZee(const TString  outputDir,   // output directory
   const Int_t    NBINS     = 60;
   const Double_t MASS_LOW  = 60;
   const Double_t MASS_HIGH = 120;  
+<<<<<<< HEAD
   const Double_t PT_CUT    = 30;
+=======
+  const Double_t PT_CUT    = 25;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   const Double_t ETA_CUT   = 2.5;
   
   // plot output file format
   const TString format("png");
+<<<<<<< HEAD
  
   Float_t count = 0;
+=======
+
+  Int_t yield = 0;
+ 
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
    
   //--------------------------------------------------------------------------------------------------------------
   // Main analysis code 
@@ -178,7 +207,13 @@ void plotZee(const TString  outputDir,   // output directory
       if((category==eEleEle2HLT) || (category==eEleEle1HLT)) {
         if(typev[ifile]==eData) { 
 	  hData->Fill(mass); 
+<<<<<<< HEAD
 	  count+=weight;
+=======
+
+	  yield++;
+	
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 	} else {
           
 	  LorentzVector slep1 = (*lep1);
@@ -256,10 +291,17 @@ void plotZee(const TString  outputDir,   // output directory
 
   CPlot plotZeeDiff("zee","","M(e^{+}e^{-}) [GeV/c^{2}]","#chi");
   plotZeeDiff.AddHist1D(hZeeDiff,"EX0",ratioColor);
+<<<<<<< HEAD
   plotZeeDiff.SetYRange(-20,20);
   plotZeeDiff.AddLine(MASS_LOW, 0,MASS_HIGH, 0,kBlack,1);
   plotZeeDiff.AddLine(MASS_LOW, 10,MASS_HIGH, 10,kBlack,3);
   plotZeeDiff.AddLine(MASS_LOW,-10,MASS_HIGH,-10,kBlack,3);
+=======
+  plotZeeDiff.SetYRange(-8,8);
+  plotZeeDiff.AddLine(MASS_LOW, 0,MASS_HIGH, 0,kBlack,1);
+  plotZeeDiff.AddLine(MASS_LOW, 5,MASS_HIGH, 5,kBlack,3);
+  plotZeeDiff.AddLine(MASS_LOW,-5,MASS_HIGH,-5,kBlack,3);
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   plotZeeDiff.Draw(c,kTRUE,format,2);
   
   CPlot plotZee2("zeelog","","",ylabel);
@@ -282,7 +324,13 @@ void plotZee(const TString  outputDir,   // output directory
   cout << "* SUMMARY" << endl;
   cout << "*--------------------------------------------------" << endl;  
   cout << endl;
+<<<<<<< HEAD
   cout << " Yield is " << count << " +- " << TMath::Sqrt(count) << endl;
+=======
+
+  cout << " Total Zee event yield is " << yield << "." << endl;
+  
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   cout << endl;
   cout << "  <> Output saved in " << outputDir << "/" << endl;    
   cout << endl;     

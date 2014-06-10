@@ -16,9 +16,15 @@
 #include "MitStyleRemix.hh"  // style settings for drawing
 #endif
 
+<<<<<<< HEAD
 void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
                 const TString mcfname  = "Zmm_MuStaEff/analysis/eff.root",
 	        const TString datfname = "data_MuStaEff/analysis/eff.root"
+=======
+void plotDataMC(const TString outdir   = "Data/extra",
+                const TString mcfname  = "MC/eff.root",
+	        const TString datfname = "Data/eff.root"
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 ) {
   gBenchmark->Start("plotDataMC");
   
@@ -37,7 +43,11 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
   TString format = "png";
 
   // y-axis ranges
+<<<<<<< HEAD
   Double_t efflow   = 0.90, effhigh   = 1.02;
+=======
+  Double_t efflow   = 0.10, effhigh   = 1.20;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   Double_t scalelow = 0.95, scalehigh = 1.05;
   
   
@@ -54,12 +64,21 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
   TGraphAsymmErrors *grMCEffEta=0, *grDataEffEta=0, *grScaleEta=0;
   TGraphAsymmErrors *grMCEffPt=0,  *grDataEffPt=0,  *grScalePt=0;
   
+<<<<<<< HEAD
   //vector<TGraphAsymmErrors*> mceff_vs_pt_per_etav;
   //vector<TGraphAsymmErrors*> eff_vs_pt_per_etav;
   //vector<TGraphAsymmErrors*> mceff_vs_eta_per_ptv;
   //vector<TGraphAsymmErrors*> eff_vs_eta_per_ptv;
   //vector<TGraphAsymmErrors*> scale_vs_pt_per_etav;
   //vector<TGraphAsymmErrors*> scale_vs_eta_per_ptv;
+=======
+  vector<TGraphAsymmErrors*> mceff_vs_pt_per_etav;
+  vector<TGraphAsymmErrors*> eff_vs_pt_per_etav;
+  vector<TGraphAsymmErrors*> mceff_vs_eta_per_ptv;
+  vector<TGraphAsymmErrors*> eff_vs_eta_per_ptv;
+  vector<TGraphAsymmErrors*> scale_vs_pt_per_etav;
+  vector<TGraphAsymmErrors*> scale_vs_eta_per_ptv;
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   
   grMCEffEta = (TGraphAsymmErrors*)mcfile.Get("grEffEta");
   grMCEffPt  = (TGraphAsymmErrors*)mcfile.Get("grEffPt");
@@ -124,11 +143,18 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
     }
   }
   
+<<<<<<< HEAD
   /*  if(hMCEff->GetEntries()>0 && hDataEff->GetEntries()>0) {
     cout << "hMCEff nx: " << hMCEff->GetNbinsX() << " ny: " << hMCEff->GetNbinsY() << endl;
     const Int_t nx = hMCEff->GetNbinsX();
     const Int_t ny = hMCEff->GetNbinsY(); 
     
+=======
+  if(hMCEff->GetEntries()>0 && hDataEff->GetEntries()>0) {
+    const Int_t nx = hMCEff->GetNbinsX();
+    const Int_t ny = hMCEff->GetNbinsY(); 
+/*    
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     for(Int_t iy=1; iy<=ny; iy++) {
       Double_t xval[nx], xerr[nx];
       Double_t effval[nx],   efferrl[nx],   efferrh[nx];
@@ -158,7 +184,11 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
       eff_vs_eta_per_ptv.push_back(new TGraphAsymmErrors(nx,xval,effval,xerr,xerr,efferrl,efferrh));
       scale_vs_eta_per_ptv.push_back(new TGraphAsymmErrors(nx,xval,scaleval,xerr,xerr,scaleerrl,scaleerrh));
     }
+<<<<<<< HEAD
     
+=======
+*/    
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     for(Int_t ix=1; ix<=nx; ix++) {
       Double_t xval[ny], xerr[ny];
       Double_t mceffval[ny], mcefferrl[ny], mcefferrh[ny];
@@ -193,11 +223,19 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
         scaleerrh[iy-1] = (scale>0) ? scale*sqrt(mcerrh*mcerrh/mceff/mceff + dataerrh*dataerrh/dataeff/dataeff) : 0;
       }
       
+<<<<<<< HEAD
       //mceff_vs_pt_per_etav.push_back(new TGraphAsymmErrors(ny,xval,mceffval,xerr,xerr,mcefferrl,mcefferrh));
       //eff_vs_pt_per_etav.push_back(new TGraphAsymmErrors(ny,xval,effval,xerr,xerr,efferrl,efferrh));
       //scale_vs_pt_per_etav.push_back(new TGraphAsymmErrors(ny,xval,scaleval,0,0,scaleerrl,scaleerrh));
     }  
     }*/
+=======
+      mceff_vs_pt_per_etav.push_back(new TGraphAsymmErrors(ny,xval,mceffval,xerr,xerr,mcefferrl,mcefferrh));
+      eff_vs_pt_per_etav.push_back(new TGraphAsymmErrors(ny,xval,effval,xerr,xerr,efferrl,efferrh));
+      scale_vs_pt_per_etav.push_back(new TGraphAsymmErrors(ny,xval,scaleval,0,0,scaleerrl,scaleerrh));
+    }  
+  }
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
 
     
   //--------------------------------------------------------------------------------------------------------------
@@ -206,7 +244,11 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
   TCanvas *c = MakeCanvas("c","c",800,600);
   
   if(grMCEffEta && grDataEffEta) {
+<<<<<<< HEAD
     CPlot plotEffEta("effeta","","#eta","#varepsilon");
+=======
+    CPlot plotEffEta("effeta","","|#eta|","#varepsilon");
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     plotEffEta.AddGraph(grMCEffEta,   "MC","",  kRed, kOpenSquare);
     plotEffEta.AddGraph(grDataEffEta,"data","",kBlue,kFullDotLarge);
     plotEffEta.SetYRange(efflow,effhigh);
@@ -238,7 +280,11 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
     plotScalePt.Draw(c,kTRUE,format);
   }
       
+<<<<<<< HEAD
   /* if(mceff_vs_pt_per_etav.size()>0 && eff_vs_pt_per_etav.size()>0) {
+=======
+  if(mceff_vs_pt_per_etav.size()>0 && eff_vs_pt_per_etav.size()>0) {
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     for(UInt_t ig=0; ig<mceff_vs_pt_per_etav.size(); ig++) {
       char pname[100];
       sprintf(pname,"effpt_eta%i",ig);
@@ -250,7 +296,11 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
       plotEffPt_perEta.SetXRange(0,150);
       plotEffPt_perEta.SetYRange(efflow,effhigh);
       plotEffPt_perEta.Draw(c,kTRUE,format);
+<<<<<<< HEAD
     }     
+=======
+    }    
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
     
     for(UInt_t ig=0; ig<scale_vs_pt_per_etav.size(); ig++) {
       char pname[100];
@@ -262,6 +312,7 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
       plotScalePt_perEta.SetXRange(0,150);
       plotScalePt_perEta.SetYRange(scalelow,scalehigh);
       plotScalePt_perEta.Draw(c,kTRUE,format);
+<<<<<<< HEAD
       }
       }
 */
@@ -271,6 +322,16 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
       char pname[100];
       sprintf(pname,"effeta_pt%i",ig);
       CPlot plotEffEta_perPt(pname,"","#eta","#varepsilon");
+=======
+    }
+  }
+
+  if(mceff_vs_eta_per_ptv.size()>0 && eff_vs_eta_per_ptv.size()>0) {
+    for(UInt_t ig=0; ig<mceff_vs_eta_per_ptv.size(); ig++) {
+      char pname[100];
+      sprintf(pname,"effeta_pt%i",ig);
+      CPlot plotEffEta_perPt(pname,"","|#eta|","#varepsilon");
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       plotEffEta_perPt.AddGraph(mceff_vs_eta_per_ptv[ig],"MC","",  kRed,  kOpenSquare);
       plotEffEta_perPt.AddGraph(eff_vs_eta_per_ptv[ig], "data","", kBlue, kFullDotLarge);
       plotEffEta_perPt.AddTextBox(ptlabelv[ig],0.2,0.82,0.4,0.88,0);
@@ -281,7 +342,11 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
     for(UInt_t ig=0; ig<scale_vs_eta_per_ptv.size(); ig++) {
       char pname[100];
       sprintf(pname,"scaleeta_pt%i",ig);
+<<<<<<< HEAD
       CPlot plotScaleEta_perPt(pname,"","#eta","scale factor");
+=======
+      CPlot plotScaleEta_perPt(pname,"","|#eta|","scale factor");
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
       plotScaleEta_perPt.AddGraph(scale_vs_eta_per_ptv[ig],"", kBlue, kFullDotLarge);
       plotScaleEta_perPt.AddLine(-2.7,1.0,2.7,1.0,kBlack,7);
       plotScaleEta_perPt.AddTextBox(ptlabelv[ig],0.7,0.82,0.9,0.88,0);
@@ -290,6 +355,10 @@ void plotDataMC(const TString outdir   = "data_MuStaEff/extra",
       plotScaleEta_perPt.Draw(c,kTRUE,format);
     }
   }
+<<<<<<< HEAD
   */
+=======
+  
+>>>>>>> 73ecf38fbabb525fd7faab1c6457f2661f15464f
   gBenchmark->Show("plotDataMC");
 }
