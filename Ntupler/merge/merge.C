@@ -1,0 +1,17 @@
+#include "chainMaker.hh"
+#include <TROOT.h>
+#include <TSystem.h>
+#include <TFile.h>
+#include <TTree.h>
+#include <TChain.h>
+
+merge(){
+
+  TChain *chain = new TChain("Events");
+
+  chainMaker(chain, "r12a-sel-j22");
+
+  chain->Merge("/scratch/klawhorn/r12a-sel-j22-merge.root");
+
+
+}

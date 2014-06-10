@@ -1,0 +1,1250 @@
+
+Processing runSCNtupler.C+...
+.
+ Adding file ( 0) with path: root://xrootd.cmsaf.mit.edu//store/user/paus/filefi/031/s12-wmm-v7a/003CD7E4-EADE-E111-A55C-00215E20426E.root
+--- Reader                   : Booking "BDTG method" of type "BDT" from Subdet0LowPt_WithIPInfo_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: Subdet0LowPt_WithIPInfo_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.0.7
+--- BDTG                     : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+MVABin 0 : MethodName = BDTG method , type == 3 , Load weights file : Subdet0LowPt_WithIPInfo_BDTG.weights.xml
+--- Reader                   : Booking "BDTG method" of type "BDT" from Subdet1LowPt_WithIPInfo_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: Subdet1LowPt_WithIPInfo_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.0.7
+--- BDTG                     : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+MVABin 1 : MethodName = BDTG method , type == 3 , Load weights file : Subdet1LowPt_WithIPInfo_BDTG.weights.xml
+--- Reader                   : Booking "BDTG method" of type "BDT" from Subdet2LowPt_WithIPInfo_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: Subdet2LowPt_WithIPInfo_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.0.7
+--- BDTG                     : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+MVABin 2 : MethodName = BDTG method , type == 3 , Load weights file : Subdet2LowPt_WithIPInfo_BDTG.weights.xml
+--- Reader                   : Booking "BDTG method" of type "BDT" from Subdet0HighPt_WithIPInfo_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: Subdet0HighPt_WithIPInfo_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.0.7
+--- BDTG                     : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+MVABin 3 : MethodName = BDTG method , type == 3 , Load weights file : Subdet0HighPt_WithIPInfo_BDTG.weights.xml
+--- Reader                   : Booking "BDTG method" of type "BDT" from Subdet1HighPt_WithIPInfo_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: Subdet1HighPt_WithIPInfo_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.0.7
+--- BDTG                     : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+MVABin 4 : MethodName = BDTG method , type == 3 , Load weights file : Subdet1HighPt_WithIPInfo_BDTG.weights.xml
+--- Reader                   : Booking "BDTG method" of type "BDT" from Subdet2HighPt_WithIPInfo_BDTG.weights.xml.
+--- MethodBase               : Reading weight file: Subdet2HighPt_WithIPInfo_BDTG.weights.xml
+--- BDTG                     : Read method "BDTG" of type "BDT"
+--- BDTG                     : MVA method was trained with TMVA Version: 4.0.7
+--- BDTG                     : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDTG" of type: "BDT"
+MVABin 5 : MethodName = BDTG method , type == 3 , Load weights file : Subdet2HighPt_WithIPInfo_BDTG.weights.xml
+Electron ID MVA Completed
+--- Reader                   : Booking "JetIDMVALowPt" of type "Category" from /home/klawhorn/cms/cmssw/031/CMSSW_5_3_10_patch1/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml.
+--- MethodBase               : Reading weight file: /home/klawhorn/cms/cmssw/031/CMSSW_5_3_10_patch1/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml
+--- JetID_puv2               : Read method "JetID_puv2" of type "Category"
+--- JetID_puv2               : MVA method was trained with TMVA Version: 4.1.2
+--- JetID_puv2               : MVA method was trained with ROOT Version: 5.32/00
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- JetID_puv2               : Recreating sub-classifiers from XML-file 
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- LowPt                    : Read method "LowPt" of type "BDT"
+--- LowPt                    : MVA method was trained with TMVA Version: 4.1.2
+--- LowPt                    : MVA method was trained with ROOT Version: 5.32/00
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- HighPt                   : Read method "HighPt" of type "BDT"
+--- HighPt                   : MVA method was trained with TMVA Version: 4.1.2
+--- HighPt                   : MVA method was trained with ROOT Version: 5.32/00
+--- Reader                   : Booked classifier "JetID_puv2" of type: "Category"
+--- Reader                   : Booking "JetIDMVAHighPt" of type "Category" from /home/klawhorn/cms/cmssw/031/CMSSW_5_3_10_patch1/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml.
+--- MethodBase               : Reading weight file: /home/klawhorn/cms/cmssw/031/CMSSW_5_3_10_patch1/src/MitPhysics/data/TMVAClassificationCategory_JetID_MET_53X_Dec2012.weights.xml
+--- JetID_puv2               : Read method "JetID_puv2" of type "Category"
+--- JetID_puv2               : MVA method was trained with TMVA Version: 4.1.2
+--- JetID_puv2               : MVA method was trained with ROOT Version: 5.32/00
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- JetID_puv2               : Recreating sub-classifiers from XML-file 
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- LowPt                    : Read method "LowPt" of type "BDT"
+--- LowPt                    : MVA method was trained with TMVA Version: 4.1.2
+--- LowPt                    : MVA method was trained with ROOT Version: 5.32/00
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- HighPt                   : Read method "HighPt" of type "BDT"
+--- HighPt                   : MVA method was trained with TMVA Version: 4.1.2
+--- HighPt                   : MVA method was trained with ROOT Version: 5.32/00
+--- Reader                   : Booked classifier "JetID_puv2" of type: "Category"
+Jet ID MVA Initialization
+MethodName : JetIDMVALowPt , type == 6
+0000: digitisation_step
+0001: L1simulation_step
+0002: digi2raw_step
+0003: HLTriggerFirstPath
+0004: HLT_Activity_Ecal_SC7_v12
+0005: HLT_L1SingleJet16_v6
+0006: HLT_L1SingleJet36_v6
+0007: HLT_Jet20_NoL1FastJet_v2
+0008: HLT_PFJet40_v5
+0009: HLT_Jet50_NoL1FastJet_v2
+0010: HLT_PFJet80_v5
+0011: HLT_PFJet140_v5
+0012: HLT_PFJet200_v5
+0013: HLT_PFJet260_v5
+0014: HLT_PFJet320_v5
+0015: HLT_Jet370_NoJetID_v13
+0016: HLT_PFJet400_v5
+0017: HLT_MonoCentralPFJet80_PFMETnoMu95_NHEF0p95_v5
+0018: HLT_SingleJetC5_v2
+0019: HLT_SingleForJet25_v2
+0020: HLT_SingleForJet15_v2
+0021: HLT_DiPFJetAve40_v6
+0022: HLT_DiPFJetAve80_v6
+0023: HLT_DiPFJetAve140_v6
+0024: HLT_DiPFJetAve200_v6
+0025: HLT_DiPFJetAve260_v6
+0026: HLT_DiPFJetAve320_v6
+0027: HLT_DiPFJetAve400_v6
+0028: HLT_FatDiPFJetMass750_DR1p1_Deta1p5_v5
+0029: HLT_DoubleJet20_ForwardBackward_v2
+0030: HLT_DiJet80_DiJet60_DiJet20_v2
+0031: HLT_DiPFJet40_PFMETnoMu65_MJJ800VBF_AllJets_v5
+0032: HLT_DiPFJet40_PFMETnoMu65_MJJ600VBF_LeadingJets_v5
+0033: HLT_DiJet40Eta2p6_BTagIP3DFastPV_v4
+0034: HLT_DiJet80Eta2p6_BTagIP3DFastPVLoose_v4
+0035: HLT_Jet60Eta1p7_Jet53Eta1p7_DiBTagIP3DFastPV_v4
+0036: HLT_Jet80Eta1p7_Jet70Eta1p7_DiBTagIP3DFastPV_v4
+0037: HLT_Jet160Eta2p4_Jet120Eta2p4_DiBTagIP3DFastPVLoose_v4
+0038: HLT_QuadJet50_v2
+0039: HLT_QuadJet50_Jet20_v1
+0040: HLT_QuadJet60_DiJet20_v2
+0041: HLT_QuadJet70_v2
+0042: HLT_QuadJet80_v2
+0043: HLT_QuadJet90_v2
+0044: HLT_QuadJet75_55_35_20_BTagIP_VBF_v3
+0045: HLT_QuadJet75_55_38_20_BTagIP_VBF_v3
+0046: HLT_QuadPFJet78_61_44_31_BTagCSV_VBF_v1
+0047: HLT_QuadPFJet82_65_48_35_BTagCSV_VBF_v1
+0048: HLT_SixJet35_v2
+0049: HLT_SixJet45_v2
+0050: HLT_SixJet50_v2
+0051: HLT_EightJet30_eta3p0_v1
+0052: HLT_EightJet35_eta3p0_v1
+0053: HLT_ExclDiJet35_HFOR_v2
+0054: HLT_ExclDiJet35_HFAND_v2
+0055: HLT_ExclDiJet80_HFAND_v2
+0056: HLT_JetE30_NoBPTX_v12
+0057: HLT_JetE30_NoBPTX3BX_v1
+0058: HLT_JetE50_NoBPTX3BX_v1
+0059: HLT_JetE70_NoBPTX3BX_v1
+0060: HLT_HT200_AlphaT0p57_v5
+0061: HLT_HT200_v3
+0062: HLT_HT250_AlphaT0p55_v4
+0063: HLT_HT250_AlphaT0p57_v4
+0064: HLT_HT250_v3
+0065: HLT_HT300_AlphaT0p53_v4
+0066: HLT_HT300_AlphaT0p54_v10
+0067: HLT_HT300_v3
+0068: HLT_HT300_DoubleDisplacedPFJet60_v5
+0069: HLT_HT300_DoubleDisplacedPFJet60_ChgFraction10_v5
+0070: HLT_HT300_SingleDisplacedPFJet60_v5
+0071: HLT_HT300_SingleDisplacedPFJet60_ChgFraction10_v5
+0072: HLT_HT350_v3
+0073: HLT_HT350_AlphaT0p52_v4
+0074: HLT_HT350_AlphaT0p53_v15
+0075: HLT_HT400_v3
+0076: HLT_HT400_AlphaT0p51_v15
+0077: HLT_HT400_AlphaT0p52_v10
+0078: HLT_HT450_AlphaT0p51_v10
+0079: HLT_HT450_v3
+0080: HLT_HT500_v3
+0081: HLT_HT550_v3
+0082: HLT_HT650_v3
+0083: HLT_HT650_Track50_dEdx3p6_v6
+0084: HLT_HT650_Track60_dEdx3p7_v6
+0085: HLT_HT750_v3
+0086: HLT_PFHT350_v6
+0087: HLT_PFHT650_v8
+0088: HLT_PFHT650_DiCentralPFJet80_CenPFJet40_v6
+0089: HLT_PFHT700_v6
+0090: HLT_PFHT750_v6
+0091: HLT_PFMET150_v4
+0092: HLT_PFMET180_v4
+0093: HLT_DiCentralJetSumpT100_dPhi05_DiCentralPFJet60_25_PFMET100_HBHENoiseCleaned_v1
+0094: HLT_DiCentralPFJet30_PFMET80_v2
+0095: HLT_DiCentralPFJet50_PFMET80_v6
+0096: HLT_DiCentralPFJet30_PFMET80_BTagCSV07_v1
+0097: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d03_v1
+0098: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d05_v1
+0099: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d03_PFDiJetPt120_v1
+0100: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05_v1
+0101: HLT_MET80_v3
+0102: HLT_MET80_Track50_dEdx3p6_v4
+0103: HLT_MET80_Track60_dEdx3p7_v4
+0104: HLT_MET120_v10
+0105: HLT_MET120_HBHENoiseCleaned_v3
+0106: HLT_MET200_v10
+0107: HLT_MET200_HBHENoiseCleaned_v3
+0108: HLT_MET300_v2
+0109: HLT_MET300_HBHENoiseCleaned_v3
+0110: HLT_MET400_v5
+0111: HLT_MET400_HBHENoiseCleaned_v3
+0112: HLT_L1SingleMuOpen_v6
+0113: HLT_L1SingleMu12_v1
+0114: HLT_L2Mu70_eta2p1_PFMET55_v1
+0115: HLT_L2Mu70_eta2p1_PFMET60_v1
+0116: HLT_L2Mu20_eta2p1_NoVertex_v1
+0117: HLT_L2Mu10_NoVertex_NoBPTX3BX_v1
+0118: HLT_L2Mu20_NoVertex_NoBPTX3BX_v1
+0119: HLT_L2Mu30_NoVertex_NoBPTX3BX_v1
+0120: HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v4
+0121: HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v4
+0122: HLT_Mu5_v18
+0123: HLT_Mu8_v16
+0124: HLT_Mu12_v16
+0125: HLT_Mu17_v3
+0126: HLT_Mu12_eta2p1_L1Mu10erJetC12WdEtaPhi1DiJetsC_v3
+0127: HLT_Mu15_eta2p1_v3
+0128: HLT_Mu24_v14
+0129: HLT_Mu24_eta2p1_v3
+0130: HLT_Mu30_v14
+0131: HLT_Mu30_eta2p1_v3
+0132: HLT_Mu40_v12
+0133: HLT_Mu40_eta2p1_v9
+0134: HLT_Mu50_eta2p1_v6
+0135: HLT_RelIso1p0Mu5_v4
+0136: HLT_RelIso1p0Mu20_v1
+0137: HLT_IsoMu15_eta2p1_L1ETM20_v5
+0138: HLT_IsoMu20_eta2p1_v5
+0139: HLT_IsoMu24_v15
+0140: HLT_IsoMu24_eta2p1_v13
+0141: HLT_IsoMu30_v9
+0142: HLT_IsoMu30_eta2p1_v13
+0143: HLT_IsoMu34_eta2p1_v11
+0144: HLT_IsoMu40_eta2p1_v8
+0145: HLT_Mu40_eta2p1_Track50_dEdx3p6_v3
+0146: HLT_Mu40_eta2p1_Track60_dEdx3p7_v3
+0147: HLT_L2DoubleMu23_NoVertex_v10
+0148: HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v2
+0149: HLT_L2DoubleMu38_NoVertex_2Cha_Angle2p5_v2
+0150: HLT_DoubleMu11_Acoplanarity03_v3
+0151: HLT_DoubleMu4_Jpsi_Displaced_v9
+0152: HLT_DoubleMu4_JpsiTk_Displaced_v3
+0153: HLT_DoubleMu3_4_Dimuon5_Bs_Central_v2
+0154: HLT_DoubleMu3p5_4_Dimuon5_Bs_Central_v2
+0155: HLT_DoubleMu4_Dimuon7_Bs_Forward_v2
+0156: HLT_DoubleMu3p5_LowMass_Displaced_v3
+0157: HLT_DoubleMu3p5_LowMassNonResonant_Displaced_v3
+0158: HLT_Dimuon0_Jpsi_v14
+0159: HLT_Dimuon0_Jpsi_NoVertexing_v11
+0160: HLT_Dimuon0_Upsilon_v14
+0161: HLT_Dimuon0_PsiPrime_v3
+0162: HLT_Dimuon5_Upsilon_v3
+0163: HLT_Dimuon5_PsiPrime_v3
+0164: HLT_Dimuon7_Upsilon_v4
+0165: HLT_Dimuon8_Jpsi_v4
+0166: HLT_Dimuon8_Upsilon_v3
+0167: HLT_Dimuon9_PsiPrime_v9
+0168: HLT_Dimuon10_Jpsi_v3
+0169: HLT_Dimuon11_Upsilon_v3
+0170: HLT_Dimuon0_Jpsi_Muon_v15
+0171: HLT_Dimuon0_Upsilon_Muon_v15
+0172: HLT_Dimuon3p5_SameSign_v3
+0173: HLT_DoubleMu4_Acoplanarity03_v3
+0174: HLT_Tau2Mu_ItTrack_v3
+0175: HLT_Mu13_Mu8_v17
+0176: HLT_Mu17_Mu8_v17
+0177: HLT_Mu17_TkMu8_v10
+0178: HLT_Mu22_TkMu8_v6
+0179: HLT_Mu22_TkMu22_v6
+0180: HLT_TripleMu5_v17
+0181: HLT_DoubleMu5_IsoMu5_v18
+0182: HLT_Mu5_L2Mu3_Jpsi_v4
+0183: HLT_Mu5_Track2_Jpsi_v18
+0184: HLT_Mu5_Track3p5_Jpsi_v4
+0185: HLT_Mu7_Track7_Jpsi_v18
+0186: HLT_Photon20_CaloIdVL_v3
+0187: HLT_Photon20_CaloIdVL_IsoL_v15
+0188: HLT_Photon22_R9Id90_HE10_Iso40_EBOnly_v4
+0189: HLT_Photon26_Photon18_v11
+0190: HLT_Photon26_R9Id85_Photon18_R9Id85_Mass60_v3
+0191: HLT_Photon26_R9Id85_Photon18_CaloId10_Iso50_Mass60_v5
+0192: HLT_Photon26_CaloId10_Iso50_Photon18_R9Id85_Mass60_v5
+0193: HLT_Photon26_CaloId10_Iso50_Photon18_CaloId10_Iso50_Mass60_v5
+0194: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_R9Id85_OR_CaloId10_Iso50_Mass60_v5
+0195: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_R9Id85_OR_CaloId10_Iso50_Mass70_v1
+0196: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_v4
+0197: HLT_Photon30_CaloIdVL_v13
+0198: HLT_Photon30_CaloIdVL_IsoL_v18
+0199: HLT_Photon36_R9Id90_HE10_Iso40_EBOnly_v4
+0200: HLT_Photon36_Photon22_v5
+0201: HLT_Photon36_R9Id85_Photon22_R9Id85_v3
+0202: HLT_Photon36_R9Id85_Photon22_CaloId10_Iso50_v5
+0203: HLT_Photon36_CaloId10_Iso50_Photon22_R9Id85_v5
+0204: HLT_Photon36_CaloId10_Iso50_Photon22_CaloId10_Iso50_v5
+0205: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon22_R9Id85_OR_CaloId10_Iso50_v5
+0206: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon22_v4
+0207: HLT_Photon50_CaloIdVL_v9
+0208: HLT_Photon50_CaloIdVL_IsoL_v16
+0209: HLT_Photon50_R9Id90_HE10_Iso40_EBOnly_v4
+0210: HLT_Photon60_CaloIdL_MHT70_v8
+0211: HLT_Photon60_CaloIdL_HT300_v1
+0212: HLT_Photon70_CaloIdXL_PFHT400_v5
+0213: HLT_Photon70_CaloIdXL_PFHT500_v5
+0214: HLT_Photon70_CaloIdXL_PFMET100_v4
+0215: HLT_Photon75_CaloIdVL_v12
+0216: HLT_Photon75_CaloIdVL_IsoL_v17
+0217: HLT_Photon75_R9Id90_HE10_Iso40_EBOnly_v4
+0218: HLT_Photon90_CaloIdVL_v9
+0219: HLT_Photon90_CaloIdVL_IsoL_v14
+0220: HLT_Photon90_R9Id90_HE10_Iso40_EBOnly_v4
+0221: HLT_DisplacedPhoton65_CaloIdVL_IsoL_PFMET25_v1
+0222: HLT_DisplacedPhoton65EBOnly_CaloIdVL_IsoL_PFMET30_v1
+0223: HLT_Photon135_v6
+0224: HLT_Photon150_v3
+0225: HLT_Photon160_v3
+0226: HLT_Photon300_NoHE_v4
+0227: HLT_DoublePhoton48_HEVT_v7
+0228: HLT_DoublePhoton53_HEVT_v1
+0229: HLT_DoublePhoton70_v5
+0230: HLT_DoublePhoton80_v6
+0231: HLT_DoublePhoton5_IsoVL_CEP_v15
+0232: HLT_L1SingleEG5_v5
+0233: HLT_L1SingleEG12_v5
+0234: HLT_L1DoubleEG3_FwdVeto_v1
+0235: HLT_L1ETM30_v1
+0236: HLT_L1ETM40_v1
+0237: HLT_L1ETM70_v1
+0238: HLT_L1ETM100_v1
+0239: HLT_Ele8_CaloIdT_TrkIdVL_v4
+0240: HLT_Ele8_CaloIdT_TrkIdVL_EG7_v1
+0241: HLT_Ele8_CaloIdT_TrkIdVL_Jet30_v4
+0242: HLT_Ele8_CaloIdL_CaloIsoVL_v16
+0243: HLT_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v14
+0244: HLT_Ele17_CaloIdL_CaloIsoVL_v16
+0245: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v5
+0246: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v17
+0247: HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass50_v5
+0248: HLT_Ele20_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC4_Mass50_v5
+0249: HLT_Ele22_CaloIdL_CaloIsoVL_v5
+0250: HLT_Ele27_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_v10
+0251: HLT_Ele27_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele15_CaloIdT_CaloIsoVL_trackless_v6
+0252: HLT_Ele27_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_HFT15_v6
+0253: HLT_Ele23_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_HFT30_v6
+0254: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet30_v1
+0255: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet50_40_30_v1
+0256: HLT_Ele27_WP80_v10
+0257: HLT_Ele27_WP80_PFMET_MT50_v4
+0258: HLT_Ele30_CaloIdVT_TrkIdT_v5
+0259: HLT_Ele32_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_v10
+0260: HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_Mass50_v5
+0261: HLT_Ele80_CaloIdVT_GsfTrkIdT_v1
+0262: HLT_Ele90_CaloIdVT_GsfTrkIdT_v1
+0263: HLT_DoubleEle8_CaloIdT_TrkIdVL_v11
+0264: HLT_DoubleEle33_CaloIdL_v13
+0265: HLT_DoubleEle33_CaloIdL_GsfTrkIdVL_v6
+0266: HLT_DoubleEle33_CaloIdT_v9
+0267: HLT_Ele15_Ele8_Ele5_CaloIdL_TrkIdVL_v5
+0268: HLT_LooseIsoPFTau35_Trk20_Prong1_v6
+0269: HLT_LooseIsoPFTau35_Trk20_Prong1_MET70_v6
+0270: HLT_LooseIsoPFTau35_Trk20_Prong1_MET75_v6
+0271: HLT_IsoMu15_eta2p1_LooseIsoPFTau35_Trk20_Prong1_L1ETM20_v6
+0272: HLT_DoubleMediumIsoPFTau30_Trk5_eta2p1_Jet30_v2
+0273: HLT_DoubleMediumIsoPFTau30_Trk5_eta2p1_v2
+0274: HLT_DoubleMediumIsoPFTau35_Trk5_eta2p1_v6
+0275: HLT_DoubleMediumIsoPFTau35_Trk5_eta2p1_Prong1_v6
+0276: HLT_IsoMu18_eta2p1_MediumIsoPFTau25_Trk5_eta2p1_v7
+0277: HLT_BTagMu_DiJet20_Mu5_v3
+0278: HLT_BTagMu_DiJet40_Mu5_v3
+0279: HLT_BTagMu_DiJet70_Mu5_v3
+0280: HLT_BTagMu_DiJet110_Mu5_v3
+0281: HLT_BTagMu_Jet300_Mu5_v3
+0282: HLT_Mu7_Ele7_CaloIdT_CaloIsoVL_v5
+0283: HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7
+0284: HLT_Mu8_DiJet30_v4
+0285: HLT_Mu8_TriJet30_v4
+0286: HLT_Mu8_QuadJet30_v4
+0287: HLT_IsoMu12_DoubleCentralJet65_v1
+0288: HLT_Mu15_eta2p1_L1ETM20_v3
+0289: HLT_Mu24_PFJet30_PFJet25_Deta3_CentralPFJet25_v1
+0290: HLT_Mu24_CentralPFJet30_CentralPFJet25_v1
+0291: HLT_IsoMu24_PFJet30_PFJet25_Deta3_CentralPFJet25_v1
+0292: HLT_IsoMu24_CentralPFJet30_CentralPFJet25_v1
+0293: HLT_IsoMu24_CentralPFJet30_CentralPFJet25_PFMET20_v1
+0294: HLT_Ele32_WP80_PFJet30_PFJet25_Deta3_v1
+0295: HLT_Ele32_WP80_PFJet30_PFJet25_Deta3_CentralPFJet30_v1
+0296: HLT_Ele32_WP80_CentralPFJet35_CentralPFJet25_v1
+0297: HLT_Ele32_WP80_CentralPFJet35_CentralPFJet25_PFMET20_v1
+0298: HLT_IsoMu17_eta2p1_CentralPFNoPUJet30_BTagIPIter_v1
+0299: HLT_IsoMu17_eta2p1_CentralPFNoPUJet30_v1
+0300: HLT_IsoMu17_eta2p1_DiCentralPFNoPUJet30_v1
+0301: HLT_IsoMu17_eta2p1_TriCentralPFNoPUJet30_30_20_v1
+0302: HLT_IsoMu17_eta2p1_TriCentralPFNoPUJet50_40_30_v1
+0303: HLT_Mu17_eta2p1_CentralPFNoPUJet30_BTagIPIter_v1
+0304: HLT_Mu17_eta2p1_TriCentralPFNoPUJet30_30_20_v1
+0305: HLT_Mu17_eta2p1_TriCentralPFNoPUJet50_40_30_v1
+0306: HLT_IsoMu20_WCandPt80_v1
+0307: HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7
+0308: HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v3
+0309: HLT_Mu12_eta2p1_DiCentral_40_20_BTagIP3D1stTrack_v3
+0310: HLT_Mu12_eta2p1_DiCentral_40_20_v3
+0311: HLT_Mu12_eta2p1_DiCentral_20_v3
+0312: HLT_Mu15_eta2p1_TriCentral_40_20_20_DiBTagIP3D1stTrack_v3
+0313: HLT_Mu15_eta2p1_TriCentral_40_20_20_BTagIP3D1stTrack_v3
+0314: HLT_Mu15_eta2p1_TriCentral_40_20_20_v3
+0315: HLT_Mu30_Ele30_CaloIdL_v6
+0316: HLT_IsoMu17_eta2p1_DiCentralPFJet30_PFHT350_PFMHT40_v6
+0317: HLT_IsoMu20_eta2p1_CentralPFJet80_v6
+0318: HLT_DoubleRelIso1p0Mu5_Mass8_PFHT175_v6
+0319: HLT_DoubleRelIso1p0Mu5_Mass8_PFHT225_v6
+0320: HLT_DoubleMu8_Mass8_PFHT225_v6
+0321: HLT_DoubleMu8_Mass8_PFHT175_v6
+0322: HLT_RelIso1p0Mu5_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT175_v6
+0323: HLT_RelIso1p0Mu5_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT225_v6
+0324: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT175_v6
+0325: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT225_v6
+0326: HLT_PFHT350_Mu15_PFMET45_v6
+0327: HLT_PFHT350_Mu15_PFMET50_v6
+0328: HLT_PFHT400_Mu5_PFMET45_v6
+0329: HLT_PFHT400_Mu5_PFMET50_v6
+0330: HLT_Mu40_PFHT350_v6
+0331: HLT_Mu60_PFHT350_v6
+0332: HLT_Mu40_HT200_v1
+0333: HLT_DoubleMu5_Ele8_CaloIdT_TrkIdVL_v14
+0334: HLT_DoubleMu8_Ele8_CaloIdT_TrkIdVL_v3
+0335: HLT_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Jet30_v5
+0336: HLT_Ele8_CaloIdT_TrkIdT_DiJet30_v15
+0337: HLT_Ele8_CaloIdT_TrkIdT_TriJet30_v15
+0338: HLT_Ele8_CaloIdT_TrkIdT_QuadJet30_v15
+0339: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Jet30_v5
+0340: HLT_Ele25_CaloIdVT_TrkIdT_TriCentralPFNoPUJet30_30_20_v1
+0341: HLT_Ele25_CaloIdVT_TrkIdT_TriCentralPFNoPUJet50_40_30_v5
+0342: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_CentralPFNoPUJet30_v5
+0343: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_DiCentralPFNoPUJet30_v5
+0344: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_TriCentralPFNoPUJet30_30_20_v1
+0345: HLT_Ele25_CaloIdVL_CaloIsoT_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet30_30_20_v1
+0346: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_CentralPFNoPUJet30_BTagIPIter_v6
+0347: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_TriCentralPFNoPUJet50_40_30_v5
+0348: HLT_Ele27_WP80_CentralPFJet80_v6
+0349: HLT_Ele27_WP80_WCandPt80_v6
+0350: HLT_Ele30_CaloIdVT_TrkIdT_PFJet100_PFJet25_v5
+0351: HLT_Ele30_CaloIdVT_TrkIdT_PFJet150_PFJet25_v5
+0352: HLT_Ele30_CaloIdVT_TrkIdT_PFNoPUJet100_PFNoPUJet25_v5
+0353: HLT_Ele30_CaloIdVT_TrkIdT_PFNoPUJet150_PFNoPUJet25_v5
+0354: HLT_DoubleEle8_CaloIdT_TrkIdVL_Mass8_PFHT175_v6
+0355: HLT_DoubleEle8_CaloIdT_TrkIdVL_Mass8_PFHT225_v6
+0356: HLT_DoubleEle10_CaloIdL_TrkIdVL_Ele10_CaloIdT_TrkIdVL_v11
+0357: HLT_TripleEle10_CaloIdL_TrkIdVL_v17
+0358: HLT_RsqMR40_Rsq0p04_v3
+0359: HLT_RsqMR45_Rsq0p09_v2
+0360: HLT_RsqMR55_Rsq0p09_MR150_v3
+0361: HLT_RsqMR60_Rsq0p09_MR150_v3
+0362: HLT_RsqMR65_Rsq0p09_MR150_v2
+0363: HLT_IsoMu12_RsqMR30_Rsq0p04_MR200_v1
+0364: HLT_IsoMu12_RsqMR40_Rsq0p04_MR200_v1
+0365: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_RsqMR30_Rsq0p04_MR200_v1
+0366: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_RsqMR40_Rsq0p04_MR200_v1
+0367: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_DoubleCentralJet65_v1
+0368: HLT_Photon40_CaloIdL_RsqMR35_Rsq0p09_MR150_v3
+0369: HLT_Photon40_CaloIdL_RsqMR40_Rsq0p09_MR150_v3
+0370: HLT_Photon40_CaloIdL_RsqMR45_Rsq0p09_MR150_v3
+0371: HLT_Photon40_CaloIdL_RsqMR50_Rsq0p09_MR150_v3
+0372: HLT_DoublePhoton40_CaloIdL_Rsq0p035_v3
+0373: HLT_DoublePhoton40_CaloIdL_Rsq0p06_v3
+0374: HLT_Mu22_Photon22_CaloIdL_v5
+0375: HLT_Mu8_DoubleEle8_CaloIdT_TrkIdVL_v5
+0376: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Ele8_CaloIdL_TrkIdVL_v5
+0377: HLT_DoubleMu14_Mass8_PFMET40_v5
+0378: HLT_DoubleMu14_Mass8_PFMET50_v5
+0379: HLT_DoubleEle14_CaloIdT_TrkIdVL_Mass8_PFMET40_v5
+0380: HLT_DoubleEle14_CaloIdT_TrkIdVL_Mass8_PFMET50_v5
+0381: HLT_Mu14_Ele14_CaloIdT_TrkIdVL_Mass8_PFMET40_v5
+0382: HLT_Mu14_Ele14_CaloIdT_TrkIdVL_Mass8_PFMET50_v5
+0383: HLT_PFHT350_PFMET100_v6
+0384: HLT_PFHT400_PFMET100_v6
+0385: HLT_CleanPFHT350_Ele5_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET45_v5
+0386: HLT_CleanPFHT350_Ele5_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET50_v5
+0387: HLT_CleanPFHT300_Ele15_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET45_v5
+0388: HLT_CleanPFHT300_Ele15_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET50_v5
+0389: HLT_CleanPFHT300_Ele40_CaloIdVT_TrkIdT_v5
+0390: HLT_CleanPFHT300_Ele60_CaloIdVT_TrkIdT_v5
+0391: HLT_Ele5_SC5_Jpsi_Mass2to15_v3
+0392: HLT_DiJet35_MJJ650_AllJets_DEta3p5_VBF_v1
+0393: HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBF_v1
+0394: HLT_DiJet35_MJJ750_AllJets_DEta3p5_VBF_v1
+0395: HLT_Ele22_eta2p1_WP90Rho_LooseIsoPFTau20_v2
+0396: HLT_Ele22_eta2p1_WP90NoIso_LooseIsoPFTau20_v2
+0397: HLT_IsoMu17_eta2p1_LooseIsoPFTau20_v2
+0398: HLT_Mu17_eta2p1_LooseIsoPFTau20_v2
+0399: HLT_PixelTracks_Multiplicity70_v2
+0400: HLT_PixelTracks_Multiplicity80_v11
+0401: HLT_PixelTracks_Multiplicity90_v2
+0402: DST_HT250_v1
+0403: DST_L1HTT_Or_L1MultiJet_v1
+0404: DST_Mu5_HT250_v1
+0405: DST_Ele8_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_HT250_v1
+0406: HLT_BeamGas_HF_Beam1_v4
+0407: HLT_BeamGas_HF_Beam2_v4
+0408: HLT_BeamHalo_v12
+0409: HLT_IsoTrackHE_v14
+0410: HLT_IsoTrackHB_v13
+0411: HLT_HcalPhiSym_v10
+0412: HLT_HcalNZS_v9
+0413: HLT_GlobalRunHPDNoise_v7
+0414: HLT_L1Tech_HBHEHO_totalOR_v5
+0415: HLT_L1Tech_HCAL_HF_single_channel_v3
+0416: HLT_ZeroBias_v6
+0417: HLT_ZeroBiasPixel_DoubleTrack_v1
+0418: HLT_Physics_v4
+0419: DST_Physics_v4
+0420: HLT_DTCalibration_v2
+0421: HLT_EcalCalibration_v3
+0422: HLT_HcalCalibration_v3
+0423: HLT_TrackerCalibration_v3
+0424: HLT_Random_v2
+0425: HLT_L1SingleMuOpen_AntiBPTX_v6
+0426: HLT_L1TrackerCosmics_v6
+0427: HLT_LogMonitor_v3
+0428: HLT_DTErrors_v3
+0429: HLT_L1DoubleJet36Central_v6
+0430: AlCa_EcalPi0EBonly_v5
+0431: AlCa_EcalPi0EEonly_v5
+0432: AlCa_EcalEtaEBonly_v5
+0433: AlCa_EcalEtaEEonly_v5
+0434: AlCa_EcalPhiSym_v12
+0435: AlCa_RPCMuonNoTriggers_v8
+0436: AlCa_RPCMuonNoHits_v8
+0437: AlCa_RPCMuonNormalisation_v8
+0438: AlCa_LumiPixels_v6
+0439: AlCa_LumiPixels_ZeroBias_v3
+0440: AlCa_LumiPixels_Random_v1
+0441: DQM_FEDIntegrity_v10
+0442: HLTriggerFinalPath
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.000279161
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: 0.965029 phi: 0.912872
+eta-phi matching 1
+last line 1
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.929317
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: 1.37449 phi: 1.74719
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.0555975
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: 0.97348 phi: 0.967804
+eta-phi matching 1
+last line 1
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 3.18015
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: -0.286362 phi: -2.4469
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 2.36546
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: 0.894135 phi: -3.00598
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 2.89248
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: -0.918457 phi: 3.10779
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 2.8226
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: 1.71857 phi: -2.65015
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 3.88487
+trigger object eta: 0.965302 phi: 0.912811
+muon eta: -2.44727 phi: -0.943695
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.000176889
+trigger object eta: 1.30353 phi: 0.749634
+muon eta: 1.30369 phi: 0.749695
+eta-phi matching 1
+last line 1
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.0246863
+trigger object eta: 1.30353 phi: 0.749634
+muon eta: 1.32782 phi: 0.754028
+eta-phi matching 1
+last line 1
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.783777
+trigger object eta: 1.30353 phi: 0.749634
+muon eta: 2.02332 phi: 1.05981
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.000175488
+trigger object eta: 0.651855 phi: -0.174377
+muon eta: 0.651688 phi: -0.174324
+eta-phi matching 1
+last line 1
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 2.77614
+trigger object eta: 0.651855 phi: -0.174377
+muon eta: -0.984154 phi: 2.06848
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 0.0242173
+trigger object eta: 0.651855 phi: -0.174377
+muon eta: 0.674103 phi: -0.16481
+eta-phi matching 1
+last line 1
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 1.41909
+trigger object eta: 0.651855 phi: -0.174377
+muon eta: -0.743317 phi: 0.0850563
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 1.12281
+trigger object eta: 0.651855 phi: -0.174377
+muon eta: 0.020997 phi: -1.10321
+eta-phi matching 0
+last line 0
+trigger object match v1!
+module name: hltL3crIsoL1sMu16Eta2p1L1f0L2f16QL3f24QL3crIsoRhoFiltered0p15
+pt threshold 1
+deltaR: 3.1199
+trigger object eta: 0.651855 phi: -0.174377
+muon eta: 1.22882 phi: 3.04272
+eta-phi matching 0
+last line 0
+******************************************************************************
+*Tree    :Events    : Events                                                 *
+*Entries :       10 : Total =          121867 bytes  File  Size =          0 *
+*        :          : Tree compression factor =   1.00                       *
+******************************************************************************
+*Branch  :Info                                                               *
+*Entries :       10 : BranchElement (see below)                              *
+*............................................................................*
+*Br    0 :runNum    : UInt_t                                                 *
+*Entries :       10 : Total  Size=        688 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    1 :evtNum    : UInt_t                                                 *
+*Entries :       10 : Total  Size=        688 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    2 :lumiSec   : UInt_t                                                 *
+*Entries :       10 : Total  Size=        694 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    3 :nPU       : UInt_t                                                 *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    4 :nPUminus  : UInt_t                                                 *
+*Entries :       10 : Total  Size=        700 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    5 :nPUplus   : UInt_t                                                 *
+*Entries :       10 : Total  Size=        694 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    6 :pvx       : Float_t                                                *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    7 :pvy       : Float_t                                                *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    8 :pvz       : Float_t                                                *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br    9 :bsx       : Float_t                                                *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   10 :bsy       : Float_t                                                *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   11 :bsz       : Float_t                                                *
+*Entries :       10 : Total  Size=        670 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   12 :pfMET     : Float_t                                                *
+*Entries :       10 : Total  Size=        682 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   13 :pfMETphi  : Float_t                                                *
+*Entries :       10 : Total  Size=        700 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   14 :pfSumET   : Float_t                                                *
+*Entries :       10 : Total  Size=        694 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   15 :mvaMET    : Float_t                                                *
+*Entries :       10 : Total  Size=        688 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   16 :mvaMETphi : Float_t                                                *
+*Entries :       10 : Total  Size=        706 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   17 :trkMET    : Float_t                                                *
+*Entries :       10 : Total  Size=        688 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   18 :trkMETphi : Float_t                                                *
+*Entries :       10 : Total  Size=        706 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   19 :trkSumET  : Float_t                                                *
+*Entries :       10 : Total  Size=        700 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   20 :rhoLowEta : Float_t                                                *
+*Entries :       10 : Total  Size=        706 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   21 :rhoHighEta : Float_t                                               *
+*Entries :       10 : Total  Size=        712 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   22 :triggerBits : ULong64_t                                            *
+*Entries :       10 : Total  Size=        758 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   23 :hasGoodPV : Bool_t                                                 *
+*Entries :       10 : Total  Size=        676 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   24 :Muon      : Int_t Muon_                                            *
+*Entries :       10 : Total  Size=      33372 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   25 :Muon.pt   : Float_t pt[Muon_]                                      *
+*Entries :       10 : Total  Size=        808 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   26 :Muon.ptErr : Float_t ptErr[Muon_]                                  *
+*Entries :       10 : Total  Size=        826 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   27 :Muon.eta  : Float_t eta[Muon_]                                     *
+*Entries :       10 : Total  Size=        814 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   28 :Muon.phi  : Float_t phi[Muon_]                                     *
+*Entries :       10 : Total  Size=        814 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   29 :Muon.staPt : Float_t staPt[Muon_]                                  *
+*Entries :       10 : Total  Size=        826 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   30 :Muon.staEta : Float_t staEta[Muon_]                                *
+*Entries :       10 : Total  Size=        832 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   31 :Muon.staPhi : Float_t staPhi[Muon_]                                *
+*Entries :       10 : Total  Size=        832 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   32 :Muon.trkIso03 : Float_t trkIso03[Muon_]                            *
+*Entries :       10 : Total  Size=        844 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   33 :Muon.emIso03 : Float_t emIso03[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   34 :Muon.hadIso03 : Float_t hadIso03[Muon_]                            *
+*Entries :       10 : Total  Size=        844 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   35 :Muon.pfChIso03 : Float_t pfChIso03[Muon_]                          *
+*Entries :       10 : Total  Size=        850 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   36 :Muon.pfChIso04 : Float_t pfChIso04[Muon_]                          *
+*Entries :       10 : Total  Size=        850 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   37 :Muon.pfNeuIso03 : Float_t pfNeuIso03[Muon_]                        *
+*Entries :       10 : Total  Size=        856 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   38 :Muon.pfNeuIso04 : Float_t pfNeuIso04[Muon_]                        *
+*Entries :       10 : Total  Size=        856 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   39 :Muon.pfGamIso03 : Float_t pfGamIso03[Muon_]                        *
+*Entries :       10 : Total  Size=        856 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   40 :Muon.pfGamIso04 : Float_t pfGamIso04[Muon_]                        *
+*Entries :       10 : Total  Size=        856 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   41 :Muon.puIso03 : Float_t puIso03[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   42 :Muon.puIso04 : Float_t puIso04[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   43 :Muon.pfPx : Float_t pfPx[Muon_]                                    *
+*Entries :       10 : Total  Size=        820 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   44 :Muon.pfPy : Float_t pfPy[Muon_]                                    *
+*Entries :       10 : Total  Size=        820 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   45 :Muon.d0   : Float_t d0[Muon_]                                      *
+*Entries :       10 : Total  Size=        808 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   46 :Muon.dz   : Float_t dz[Muon_]                                      *
+*Entries :       10 : Total  Size=        808 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   47 :Muon.tkNchi2 : Float_t tkNchi2[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   48 :Muon.muNchi2 : Float_t muNchi2[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   49 :Muon.trkKink : Float_t trkKink[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   50 :Muon.gblKink : Float_t gblKink[Muon_]                              *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   51 :Muon.mva  : Float_t mva[Muon_]                                     *
+*Entries :       10 : Total  Size=        814 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   52 :Muon.q    : Int_t q[Muon_]                                         *
+*Entries :       10 : Total  Size=        802 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   53 :Muon.nValidHits : Int_t nValidHits[Muon_]                          *
+*Entries :       10 : Total  Size=        856 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   54 :Muon.qualityBits : UInt_t qualityBits[Muon_]                       *
+*Entries :       10 : Total  Size=        862 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   55 :Muon.typeBits : UInt_t typeBits[Muon_]                             *
+*Entries :       10 : Total  Size=        844 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   56 :Muon.nTkHits : UInt_t nTkHits[Muon_]                               *
+*Entries :       10 : Total  Size=        838 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   57 :Muon.nPixHits : UInt_t nPixHits[Muon_]                             *
+*Entries :       10 : Total  Size=        844 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   58 :Muon.nTkLayers : UInt_t nTkLayers[Muon_]                           *
+*Entries :       10 : Total  Size=        850 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   59 :Muon.nPixLayers : UInt_t nPixLayers[Muon_]                         *
+*Entries :       10 : Total  Size=        856 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   60 :Muon.nSeg : UInt_t nSeg[Muon_]                                     *
+*Entries :       10 : Total  Size=        820 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   61 :Muon.nMatch : UInt_t nMatch[Muon_]                                 *
+*Entries :       10 : Total  Size=        832 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   62 :Muon.trkID : UInt_t trkID[Muon_]                                   *
+*Entries :       10 : Total  Size=        826 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   63 :Muon.hltMatchBits : ULong64_t hltMatchBits[Muon_]                  *
+*Entries :       10 : Total  Size=        904 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   64 :Electron  : Int_t Electron_                                        *
+*Entries :       10 : Total  Size=      32442 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   65 :Electron.pt : Float_t pt[Electron_]                                *
+*Entries :       10 : Total  Size=        804 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   66 :Electron.eta : Float_t eta[Electron_]                              *
+*Entries :       10 : Total  Size=        810 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   67 :Electron.phi : Float_t phi[Electron_]                              *
+*Entries :       10 : Total  Size=        810 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   68 :Electron.trkIso03 : Float_t trkIso03[Electron_]                    *
+*Entries :       10 : Total  Size=        840 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   69 :Electron.emIso03 : Float_t emIso03[Electron_]                      *
+*Entries :       10 : Total  Size=        834 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   70 :Electron.hadIso03 : Float_t hadIso03[Electron_]                    *
+*Entries :       10 : Total  Size=        840 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   71 :Electron.pfChIso03 : Float_t pfChIso03[Electron_]                  *
+*Entries :       10 : Total  Size=        846 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   72 :Electron.pfChIso04 : Float_t pfChIso04[Electron_]                  *
+*Entries :       10 : Total  Size=        846 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   73 :Electron.pfNeuIso03 : Float_t pfNeuIso03[Electron_]                *
+*Entries :       10 : Total  Size=        852 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   74 :Electron.pfNeuIso04 : Float_t pfNeuIso04[Electron_]                *
+*Entries :       10 : Total  Size=        852 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   75 :Electron.pfGamIso03 : Float_t pfGamIso03[Electron_]                *
+*Entries :       10 : Total  Size=        852 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   76 :Electron.pfGamIso04 : Float_t pfGamIso04[Electron_]                *
+*Entries :       10 : Total  Size=        852 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   77 :Electron.puIso03 : Float_t puIso03[Electron_]                      *
+*Entries :       10 : Total  Size=        834 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   78 :Electron.puIso04 : Float_t puIso04[Electron_]                      *
+*Entries :       10 : Total  Size=        834 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   79 :Electron.pfPx : Float_t pfPx[Electron_]                            *
+*Entries :       10 : Total  Size=        816 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   80 :Electron.pfPy : Float_t pfPy[Electron_]                            *
+*Entries :       10 : Total  Size=        816 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   81 :Electron.d0 : Float_t d0[Electron_]                                *
+*Entries :       10 : Total  Size=        804 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   82 :Electron.dz : Float_t dz[Electron_]                                *
+*Entries :       10 : Total  Size=        804 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   83 :Electron.scEt : Float_t scEt[Electron_]                            *
+*Entries :       10 : Total  Size=        816 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   84 :Electron.scEta : Float_t scEta[Electron_]                          *
+*Entries :       10 : Total  Size=        822 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   85 :Electron.scPhi : Float_t scPhi[Electron_]                          *
+*Entries :       10 : Total  Size=        822 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   86 :Electron.ecalE : Float_t ecalE[Electron_]                          *
+*Entries :       10 : Total  Size=        822 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   87 :Electron.HoverE : Float_t HoverE[Electron_]                        *
+*Entries :       10 : Total  Size=        828 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   88 :Electron.EoverP : Float_t EoverP[Electron_]                        *
+*Entries :       10 : Total  Size=        828 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   89 :Electron.fBrem : Float_t fBrem[Electron_]                          *
+*Entries :       10 : Total  Size=        822 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   90 :Electron.deltaEtaIn : Float_t deltaEtaIn[Electron_]                *
+*Entries :       10 : Total  Size=        852 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   91 :Electron.deltaPhiIn : Float_t deltaPhiIn[Electron_]                *
+*Entries :       10 : Total  Size=        852 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   92 :Electron.sigiEtaiEta : Float_t sigiEtaiEta[Electron_]              *
+*Entries :       10 : Total  Size=        858 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   93 :Electron.partnerDeltaCot : Float_t partnerDeltaCot[Electron_]      *
+*Entries :       10 : Total  Size=        882 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   94 :Electron.partnerDist : Float_t partnerDist[Electron_]              *
+*Entries :       10 : Total  Size=        858 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   95 :Electron.mva : Float_t mva[Electron_]                              *
+*Entries :       10 : Total  Size=        810 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   96 :Electron.q : Int_t q[Electron_]                                    *
+*Entries :       10 : Total  Size=        798 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   97 :Electron.nExpHitsInner : UInt_t nExpHitsInner[Electron_]           *
+*Entries :       10 : Total  Size=        870 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   98 :Electron.scID : UInt_t scID[Electron_]                             *
+*Entries :       10 : Total  Size=        816 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br   99 :Electron.trkID : UInt_t trkID[Electron_]                           *
+*Entries :       10 : Total  Size=        822 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  100 :Electron.typeBits : UInt_t typeBits[Electron_]                     *
+*Entries :       10 : Total  Size=        840 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  101 :Electron.hltMatchBits : ULong64_t hltMatchBits[Electron_]          *
+*Entries :       10 : Total  Size=        864 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  102 :Electron.isConv : Bool_t isConv[Electron_]                         *
+*Entries :       10 : Total  Size=        828 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  103 :PFJet     : Int_t PFJet_                                           *
+*Entries :       10 : Total  Size=      11087 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  104 :PFJet.pt  : Float_t pt[PFJet_]                                     *
+*Entries :       10 : Total  Size=        888 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  105 :PFJet.eta : Float_t eta[PFJet_]                                    *
+*Entries :       10 : Total  Size=        894 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  106 :PFJet.phi : Float_t phi[PFJet_]                                    *
+*Entries :       10 : Total  Size=        894 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  107 :PFJet.mass : Float_t mass[PFJet_]                                  *
+*Entries :       10 : Total  Size=        900 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  108 :PFJet.rawPt : Float_t rawPt[PFJet_]                                *
+*Entries :       10 : Total  Size=        906 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  109 :PFJet.area : Float_t area[PFJet_]                                  *
+*Entries :       10 : Total  Size=        900 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  110 :PFJet.tche : Float_t tche[PFJet_]                                  *
+*Entries :       10 : Total  Size=        900 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  111 :PFJet.tchp : Float_t tchp[PFJet_]                                  *
+*Entries :       10 : Total  Size=        900 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  112 :PFJet.dz  : Float_t dz[PFJet_]                                     *
+*Entries :       10 : Total  Size=        888 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  113 :PFJet.mcFlavor : Int_t mcFlavor[PFJet_]                            *
+*Entries :       10 : Total  Size=        924 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  114 :PFJet.hltMatchBits : ULong64_t hltMatchBits[PFJet_]                *
+*Entries :       10 : Total  Size=       1056 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  115 :Photon    : Int_t Photon_                                          *
+*Entries :       10 : Total  Size=      17452 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  116 :Photon.pt : Float_t pt[Photon_]                                    *
+*Entries :       10 : Total  Size=        788 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  117 :Photon.eta : Float_t eta[Photon_]                                  *
+*Entries :       10 : Total  Size=        794 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  118 :Photon.phi : Float_t phi[Photon_]                                  *
+*Entries :       10 : Total  Size=        794 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  119 :Photon.scEt : Float_t scEt[Photon_]                                *
+*Entries :       10 : Total  Size=        800 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  120 :Photon.scEta : Float_t scEta[Photon_]                              *
+*Entries :       10 : Total  Size=        806 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  121 :Photon.scPhi : Float_t scPhi[Photon_]                              *
+*Entries :       10 : Total  Size=        806 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  122 :Photon.trkIso04 : Float_t trkIso04[Photon_]                        *
+*Entries :       10 : Total  Size=        824 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  123 :Photon.trkIso04NoPV : Float_t trkIso04NoPV[Photon_]                *
+*Entries :       10 : Total  Size=        848 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  124 :Photon.emIso04 : Float_t emIso04[Photon_]                          *
+*Entries :       10 : Total  Size=        818 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  125 :Photon.hadIso04 : Float_t hadIso04[Photon_]                        *
+*Entries :       10 : Total  Size=        824 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  126 :Photon.HoverE : Float_t HoverE[Photon_]                            *
+*Entries :       10 : Total  Size=        812 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  127 :Photon.R9 : Float_t R9[Photon_]                                    *
+*Entries :       10 : Total  Size=        788 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  128 :Photon.sigiEtaiEta : Float_t sigiEtaiEta[Photon_]                  *
+*Entries :       10 : Total  Size=        842 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  129 :Photon.sigiPhiiPhi : Float_t sigiPhiiPhi[Photon_]                  *
+*Entries :       10 : Total  Size=        842 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  130 :Photon.scID : UInt_t scID[Photon_]                                 *
+*Entries :       10 : Total  Size=        800 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  131 :Photon.hasPixelSeed : Bool_t hasPixelSeed[Photon_]                 *
+*Entries :       10 : Total  Size=        848 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  132 :Photon.passSpikeFilter : Bool_t passSpikeFilter[Photon_]           *
+*Entries :       10 : Total  Size=        866 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  133 :Photon.passEleVetoConvRec : Bool_t passEleVetoConvRec[Photon_]     *
+*Entries :       10 : Total  Size=        884 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  134 :Photon.passConvId : Bool_t passConvId[Photon_]                     *
+*Entries :       10 : Total  Size=        836 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  135 :Photon.hltMatchBits : ULong64_t hltMatchBits[Photon_]              *
+*Entries :       10 : Total  Size=        848 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  136 :PV        : Int_t PV_                                              *
+*Entries :       10 : Total  Size=      10616 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  137 :PV.nTracksFit : UInt_t nTracksFit[PV_]                             *
+*Entries :       10 : Total  Size=       1388 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  138 :PV.ndof   : Float_t ndof[PV_]                                      *
+*Entries :       10 : Total  Size=       1352 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  139 :PV.chi2   : Float_t chi2[PV_]                                      *
+*Entries :       10 : Total  Size=       1352 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  140 :PV.sumPt  : Float_t sumPt[PV_]                                     *
+*Entries :       10 : Total  Size=       1358 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  141 :PV.x      : Float_t x[PV_]                                         *
+*Entries :       10 : Total  Size=       1334 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  142 :PV.y      : Float_t y[PV_]                                         *
+*Entries :       10 : Total  Size=       1334 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
+*Br  143 :PV.z      : Float_t z[PV_]                                         *
+*Entries :       10 : Total  Size=       1334 bytes  One basket in memory    *
+*Baskets :        0 : Basket Size=      32000 bytes  Compression=   1.00     *
+*............................................................................*
